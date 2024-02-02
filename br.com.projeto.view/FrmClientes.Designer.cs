@@ -32,7 +32,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tabClientes = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPageCadClientes = new System.Windows.Forms.TabPage();
             this.comboBoxUf = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbCidade = new System.Windows.Forms.TextBox();
@@ -72,7 +72,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnEditar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabClientes.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPageCadClientes.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ConsultaCliente)).BeginInit();
             this.SuspendLayout();
@@ -100,7 +100,7 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             // tabClientes
             // 
-            this.tabClientes.Controls.Add(this.tabPage1);
+            this.tabClientes.Controls.Add(this.tabPageCadClientes);
             this.tabClientes.Controls.Add(this.tabPage2);
             this.tabClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabClientes.Location = new System.Drawing.Point(7, 114);
@@ -109,43 +109,43 @@ namespace ProjetoCv.br.com.projeto.view
             this.tabClientes.Size = new System.Drawing.Size(1170, 348);
             this.tabClientes.TabIndex = 1;
             // 
-            // tabPage1
+            // tabPageCadClientes
             // 
-            this.tabPage1.Controls.Add(this.comboBoxUf);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.tbCidade);
-            this.tabPage1.Controls.Add(this.lbCidade);
-            this.tabPage1.Controls.Add(this.tbBairro);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.tbComplemento);
-            this.tabPage1.Controls.Add(this.lbComplemento);
-            this.tabPage1.Controls.Add(this.tbNumero);
-            this.tabPage1.Controls.Add(this.lbNumero);
-            this.tabPage1.Controls.Add(this.tbEndereco);
-            this.tabPage1.Controls.Add(this.lbEndereco);
-            this.tabPage1.Controls.Add(this.maskedTBCep);
-            this.tabPage1.Controls.Add(this.lbCep);
-            this.tabPage1.Controls.Add(this.maskedTBCel);
-            this.tabPage1.Controls.Add(this.maskedTBTel);
-            this.tabPage1.Controls.Add(this.maskedTBCpf);
-            this.tabPage1.Controls.Add(this.maskedTbRG);
-            this.tabPage1.Controls.Add(this.lbCel);
-            this.tabPage1.Controls.Add(this.lbTel);
-            this.tabPage1.Controls.Add(this.tbEmail);
-            this.tabPage1.Controls.Add(this.lbEmail);
-            this.tabPage1.Controls.Add(this.lbCpf);
-            this.tabPage1.Controls.Add(this.lbRg);
-            this.tabPage1.Controls.Add(this.tbNome);
-            this.tabPage1.Controls.Add(this.lbNome);
-            this.tabPage1.Controls.Add(this.tbCodigo);
-            this.tabPage1.Controls.Add(this.labCodigo);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(935, 315);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Dados Pessoais";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPageCadClientes.Controls.Add(this.comboBoxUf);
+            this.tabPageCadClientes.Controls.Add(this.label4);
+            this.tabPageCadClientes.Controls.Add(this.tbCidade);
+            this.tabPageCadClientes.Controls.Add(this.lbCidade);
+            this.tabPageCadClientes.Controls.Add(this.tbBairro);
+            this.tabPageCadClientes.Controls.Add(this.label2);
+            this.tabPageCadClientes.Controls.Add(this.tbComplemento);
+            this.tabPageCadClientes.Controls.Add(this.lbComplemento);
+            this.tabPageCadClientes.Controls.Add(this.tbNumero);
+            this.tabPageCadClientes.Controls.Add(this.lbNumero);
+            this.tabPageCadClientes.Controls.Add(this.tbEndereco);
+            this.tabPageCadClientes.Controls.Add(this.lbEndereco);
+            this.tabPageCadClientes.Controls.Add(this.maskedTBCep);
+            this.tabPageCadClientes.Controls.Add(this.lbCep);
+            this.tabPageCadClientes.Controls.Add(this.maskedTBCel);
+            this.tabPageCadClientes.Controls.Add(this.maskedTBTel);
+            this.tabPageCadClientes.Controls.Add(this.maskedTBCpf);
+            this.tabPageCadClientes.Controls.Add(this.maskedTbRG);
+            this.tabPageCadClientes.Controls.Add(this.lbCel);
+            this.tabPageCadClientes.Controls.Add(this.lbTel);
+            this.tabPageCadClientes.Controls.Add(this.tbEmail);
+            this.tabPageCadClientes.Controls.Add(this.lbEmail);
+            this.tabPageCadClientes.Controls.Add(this.lbCpf);
+            this.tabPageCadClientes.Controls.Add(this.lbRg);
+            this.tabPageCadClientes.Controls.Add(this.tbNome);
+            this.tabPageCadClientes.Controls.Add(this.lbNome);
+            this.tabPageCadClientes.Controls.Add(this.tbCodigo);
+            this.tabPageCadClientes.Controls.Add(this.labCodigo);
+            this.tabPageCadClientes.Location = new System.Drawing.Point(4, 29);
+            this.tabPageCadClientes.Name = "tabPageCadClientes";
+            this.tabPageCadClientes.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageCadClientes.Size = new System.Drawing.Size(1162, 315);
+            this.tabPageCadClientes.TabIndex = 0;
+            this.tabPageCadClientes.Text = "Dados Pessoais";
+            this.tabPageCadClientes.UseVisualStyleBackColor = true;
             // 
             // comboBoxUf
             // 
@@ -535,6 +535,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnExcluir.TabIndex = 4;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnEditar
             // 
@@ -547,6 +548,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnEditar.TabIndex = 5;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // FrmClientes
             // 
@@ -565,8 +567,8 @@ namespace ProjetoCv.br.com.projeto.view
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabClientes.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabPageCadClientes.ResumeLayout(false);
+            this.tabPageCadClientes.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ConsultaCliente)).EndInit();
@@ -579,7 +581,7 @@ namespace ProjetoCv.br.com.projeto.view
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabClientes;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPageCadClientes;
         private System.Windows.Forms.TextBox tbCodigo;
         private System.Windows.Forms.Label labCodigo;
         private System.Windows.Forms.TabPage tabPage2;

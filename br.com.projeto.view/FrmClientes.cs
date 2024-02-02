@@ -62,6 +62,10 @@ namespace ProjetoCv.br.com.projeto.view
             //2 - Passo: Criar um Objeto da classe Cliente DAO, e passar os dados para o metodo cadastrar.
             ClienteDao cDao = new ClienteDao();
             cDao.CadastrarCliente(objC);//Aqui se passa todos os dados recebidos da tela para o banco de dados
+
+
+            //Recarega a lista de clientes
+            dataGridView_ConsultaCliente.DataSource = cDao.ListarClientes();
         }
 
         private void FrmClientes_Load(object sender, EventArgs e)
@@ -91,6 +95,51 @@ namespace ProjetoCv.br.com.projeto.view
            tbCidade.Text = dataGridView_ConsultaCliente.CurrentRow.Cells[12].Value.ToString();
             comboBoxUf.Text = dataGridView_ConsultaCliente.CurrentRow.Cells[13].Value.ToString();
 
+            //Ação para quando clicar/selecionar 2x, um cliente listado, mudar para a tela de Cadastro de Clientes
+            tabClientes.SelectedTab = tabPageCadClientes;
+
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            ClienteDao cDao = new ClienteDao();
+            Cliente objcliente = new Cliente();
+
+            objcliente.ID = int.Parse(tbCodigo.Text);//Pega o valor da tela e envia para o objeto do tipo Cliente, que é o nosso modelo
+            cDao.ExcluirCliente(objcliente);//Chama o metodo de excluir da classe de ação, e passa como parametro o objeto Modelo da classe Cliente
+           
+            //Recarega a lista de clientes
+            dataGridView_ConsultaCliente.DataSource = cDao.ListarClientes();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            //1 - Passo: receber os dados de dentro do Objeto cliente. 
+
+            Cliente objC = new Cliente();
+
+            objC.ID = int.Parse(tbCodigo.Text);
+            objC.Nome = tbNome.Text;
+            objC.Rg = maskedTbRG.Text;
+            objC.Cpf = maskedTBCpf.Text;
+            objC.Email = tbEmail.Text;
+            objC.Telefone = maskedTBTel.Text;
+            objC.Celular = maskedTBCel.Text;
+            objC.Cep = maskedTBCep.Text;
+            objC.Endereco = tbEndereco.Text;
+            objC.Numero = int.Parse(tbNumero.Text);
+            objC.Complemento = tbComplemento.Text;
+            objC.Bairro = tbBairro.Text;
+            objC.Cidade = tbCidade.Text;
+            objC.Estado = comboBoxUf.Text;
+
+            //2 - Passo: Criar um Objeto da classe Cliente DAO, e passar os dados para o metodo cadastrar.
+            ClienteDao cDao = new ClienteDao();
+            cDao.AlterarCliente(objC);//Aqui se passa todos os dados recebidos da tela para o banco de dados
+
+
+            //Recarega a lista de clientes
+            dataGridView_ConsultaCliente.DataSource = cDao.ListarClientes();
         }
     }
 }

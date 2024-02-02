@@ -60,6 +60,7 @@ namespace ProjetoCv.br.com.projeto.dao
                 executaComando.ExecuteNonQuery();//Inicializa a conexão
 
                 MessageBox.Show("Cliente cadastrado com Sucesso!");
+                conexao.Close();
 
 
             }
@@ -90,7 +91,9 @@ namespace ProjetoCv.br.com.projeto.dao
                 //Passo 3 - Criando o MySqlDataAdapter para preencher os dados da Datatable, e passado por parametro o Comando com so arquuivos do Banco
                 MySqlDataAdapter da = new MySqlDataAdapter(executaComando);
                 da.FillAsync(tabelaCliente);//Aqui preenche a tabela com as informações/dados
-                
+                conexao.Close();
+
+
                 return tabelaCliente;
 
             }
@@ -109,8 +112,8 @@ namespace ProjetoCv.br.com.projeto.dao
             try
             {
                 //Passo 1 - Comando Sql para inserir os dados no Banco
-                string sql = @"Update tb_clientes nome=@nome,rg=@rg,cpf=@cpf,email=@email,telefone=@telefone,celular=@celular,cep=@cep,endereco=@endereco,numero=@numer,complemento=@complemento,
-                                 bairro=@bairro,cidade=@cidade,estado=@estado
+                string sql = @"Update tb_clientes set nome=@nome,rg=@rg,cpf=@cpf,email=@email,telefone=@telefone,celular=@celular,cep=@cep,endereco=@endereco,numero=@numero,
+                                complemento=@complemento,bairro=@bairro,cidade=@cidade,estado=@estado
                                     Where id=@id";//Esse parametro é para receber os valores que vem da tela
 
                 //Passo 2 - Organizar o SQL
@@ -137,6 +140,8 @@ namespace ProjetoCv.br.com.projeto.dao
                 executaComando.ExecuteNonQuery();//Inicializa a conexão
 
                 MessageBox.Show("Cliente Alterado com Sucesso!");
+                conexao.Close();
+
 
 
             }
@@ -170,6 +175,7 @@ namespace ProjetoCv.br.com.projeto.dao
                 executaComando.ExecuteNonQuery();//Inicializa a conexão
 
                 MessageBox.Show("Cliente Excluido com Sucesso!");
+                conexao.Close();//Encerra a conexão após a exclusão
 
 
             }
