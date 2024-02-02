@@ -70,6 +70,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
+            this.btnPesquisarCep = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabClientes.SuspendLayout();
             this.tabPageCadClientes.SuspendLayout();
@@ -111,6 +112,7 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             // tabPageCadClientes
             // 
+            this.tabPageCadClientes.Controls.Add(this.btnPesquisarCep);
             this.tabPageCadClientes.Controls.Add(this.comboBoxUf);
             this.tabPageCadClientes.Controls.Add(this.label4);
             this.tabPageCadClientes.Controls.Add(this.tbCidade);
@@ -150,34 +152,6 @@ namespace ProjetoCv.br.com.projeto.view
             // comboBoxUf
             // 
             this.comboBoxUf.FormattingEnabled = true;
-            this.comboBoxUf.Items.AddRange(new object[] {
-            "AC",
-            "AL",
-            "AP",
-            "AM",
-            "BA",
-            "CE",
-            "DF",
-            "ES",
-            "GO",
-            "MA",
-            "MT",
-            "MS",
-            "MG",
-            "PA",
-            "PB",
-            "PR",
-            "PE",
-            "PI",
-            "RJ",
-            "RN",
-            "RS",
-            "RO",
-            "RR",
-            "SC",
-            "SP",
-            "SE",
-            "TO"});
             this.comboBoxUf.Location = new System.Drawing.Point(592, 214);
             this.comboBoxUf.Name = "comboBoxUf";
             this.comboBoxUf.Size = new System.Drawing.Size(108, 28);
@@ -236,7 +210,7 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             this.tbComplemento.BackColor = System.Drawing.SystemColors.Window;
             this.tbComplemento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbComplemento.Location = new System.Drawing.Point(777, 171);
+            this.tbComplemento.Location = new System.Drawing.Point(914, 171);
             this.tbComplemento.Name = "tbComplemento";
             this.tbComplemento.Size = new System.Drawing.Size(149, 26);
             this.tbComplemento.TabIndex = 25;
@@ -245,7 +219,7 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             this.lbComplemento.AutoSize = true;
             this.lbComplemento.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbComplemento.Location = new System.Drawing.Point(661, 172);
+            this.lbComplemento.Location = new System.Drawing.Point(798, 172);
             this.lbComplemento.Name = "lbComplemento";
             this.lbComplemento.Size = new System.Drawing.Size(112, 20);
             this.lbComplemento.TabIndex = 24;
@@ -255,7 +229,7 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             this.tbNumero.BackColor = System.Drawing.SystemColors.Window;
             this.tbNumero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbNumero.Location = new System.Drawing.Point(589, 169);
+            this.tbNumero.Location = new System.Drawing.Point(726, 169);
             this.tbNumero.Name = "tbNumero";
             this.tbNumero.Size = new System.Drawing.Size(56, 26);
             this.tbNumero.TabIndex = 23;
@@ -264,7 +238,7 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             this.lbNumero.AutoSize = true;
             this.lbNumero.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbNumero.Location = new System.Drawing.Point(558, 171);
+            this.lbNumero.Location = new System.Drawing.Point(695, 171);
             this.lbNumero.Name = "lbNumero";
             this.lbNumero.Size = new System.Drawing.Size(30, 20);
             this.lbNumero.TabIndex = 22;
@@ -274,7 +248,7 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             this.tbEndereco.BackColor = System.Drawing.SystemColors.Window;
             this.tbEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbEndereco.Location = new System.Drawing.Point(299, 169);
+            this.tbEndereco.Location = new System.Drawing.Point(436, 169);
             this.tbEndereco.Name = "tbEndereco";
             this.tbEndereco.Size = new System.Drawing.Size(250, 26);
             this.tbEndereco.TabIndex = 21;
@@ -283,7 +257,7 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             this.lbEndereco.AutoSize = true;
             this.lbEndereco.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbEndereco.Location = new System.Drawing.Point(216, 171);
+            this.lbEndereco.Location = new System.Drawing.Point(353, 171);
             this.lbEndereco.Name = "lbEndereco";
             this.lbEndereco.Size = new System.Drawing.Size(82, 20);
             this.lbEndereco.TabIndex = 20;
@@ -293,7 +267,7 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             this.maskedTBCep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.maskedTBCep.Location = new System.Drawing.Point(83, 167);
-            this.maskedTBCep.Mask = "00.000-999";
+            this.maskedTBCep.Mask = "00000-999";
             this.maskedTBCep.Name = "maskedTBCep";
             this.maskedTBCep.Size = new System.Drawing.Size(119, 26);
             this.maskedTBCep.TabIndex = 19;
@@ -552,6 +526,19 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
+            // btnPesquisarCep
+            // 
+            this.btnPesquisarCep.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnPesquisarCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisarCep.ForeColor = System.Drawing.Color.White;
+            this.btnPesquisarCep.Location = new System.Drawing.Point(210, 164);
+            this.btnPesquisarCep.Name = "btnPesquisarCep";
+            this.btnPesquisarCep.Size = new System.Drawing.Size(92, 33);
+            this.btnPesquisarCep.TabIndex = 6;
+            this.btnPesquisarCep.Text = "Pesquisar";
+            this.btnPesquisarCep.UseVisualStyleBackColor = false;
+            this.btnPesquisarCep.Click += new System.EventHandler(this.btnPesquisarCep_Click);
+            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -621,5 +608,6 @@ namespace ProjetoCv.br.com.projeto.view
         private System.Windows.Forms.Button tbnPesquisar_Consulta;
         private System.Windows.Forms.TextBox textBoxNomeBuscar;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnPesquisarCep;
     }
 }
