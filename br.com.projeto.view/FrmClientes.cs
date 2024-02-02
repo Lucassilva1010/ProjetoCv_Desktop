@@ -205,5 +205,12 @@ namespace ProjetoCv.br.com.projeto.view
 
             }
         }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            //Ação para limpar a tela
+            //Foi criado uma classe aonde criamos o Metodo para alimpar os controles.
+            new Helpers().LimpaTela(this);
+        }
     }
 }
