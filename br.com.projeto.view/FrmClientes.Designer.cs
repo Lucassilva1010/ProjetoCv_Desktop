@@ -64,7 +64,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView_ConsultaCliente = new System.Windows.Forms.DataGridView();
             this.tbnPesquisar_Consulta = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxNomeBuscar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -446,7 +446,7 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             this.tabPage2.Controls.Add(this.dataGridView_ConsultaCliente);
             this.tabPage2.Controls.Add(this.tbnPesquisar_Consulta);
-            this.tabPage2.Controls.Add(this.textBox4);
+            this.tabPage2.Controls.Add(this.textBoxNomeBuscar);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
@@ -479,15 +479,17 @@ namespace ProjetoCv.br.com.projeto.view
             this.tbnPesquisar_Consulta.TabIndex = 6;
             this.tbnPesquisar_Consulta.Text = "Pesquisar";
             this.tbnPesquisar_Consulta.UseVisualStyleBackColor = false;
+            this.tbnPesquisar_Consulta.Click += new System.EventHandler(this.tbnPesquisar_Consulta_Click);
             // 
-            // textBox4
+            // textBoxNomeBuscar
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(69, 17);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(367, 26);
-            this.textBox4.TabIndex = 5;
+            this.textBoxNomeBuscar.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxNomeBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxNomeBuscar.Location = new System.Drawing.Point(69, 17);
+            this.textBoxNomeBuscar.Name = "textBoxNomeBuscar";
+            this.textBoxNomeBuscar.Size = new System.Drawing.Size(367, 26);
+            this.textBoxNomeBuscar.TabIndex = 5;
+            this.textBoxNomeBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNomeBuscar_KeyPress);
             // 
             // label3
             // 
@@ -617,7 +619,7 @@ namespace ProjetoCv.br.com.projeto.view
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.DataGridView dataGridView_ConsultaCliente;
         private System.Windows.Forms.Button tbnPesquisar_Consulta;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxNomeBuscar;
         private System.Windows.Forms.Label label3;
     }
 }

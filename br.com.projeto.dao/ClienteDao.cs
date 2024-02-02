@@ -106,6 +106,77 @@ namespace ProjetoCv.br.com.projeto.dao
             }
         }
         #endregion
+        #region Buscar Cliente
+        public DataTable BuscarClientesPorNome(string nome)
+        {
+            try
+            {
+                //1  Criando o DataTable e o comendo Sql
+                DataTable tabelaCliente = new DataTable();
+                string sql = "SELECT * FROM bdvendas.tb_clientes Where nome=@nome";
+
+                //2 Organizando e executando o sql, abrir e executar a Conexão com o banco de dados
+                MySqlCommand executaComando = new MySqlCommand(sql, conexao);
+                executaComando.Parameters.AddWithValue("@nome",nome);
+             
+
+                conexao.Open();//Abre a conexão
+                executaComando.ExecuteNonQuery();//Inicializa a conexão
+
+                //Passo 3 - Criando o MySqlDataAdapter para preencher os dados da Datatable, e passado por parametro o Comando com so arquuivos do Banco
+                MySqlDataAdapter da = new MySqlDataAdapter(executaComando);
+                da.FillAsync(tabelaCliente);//Aqui preenche a tabela com as informações/dados
+
+                conexao.Close();
+
+                return tabelaCliente;
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show($"Erro ao listar Cliente. " +
+                    $"Erro: {erro}");
+                return null;// Para retornar vazio
+            }
+        }
+        #endregion
+        #region Listar Cliente por letras e nome
+        public DataTable ListarClientesPorNomeEletras(string nome)
+        {
+            try
+            {
+                //1  Criando o DataTable e o comendo Sql
+                DataTable tabelaCliente = new DataTable();
+                //Na pesquisa agora use-0se o Like para que ele começe a fazer uma pesquisa simultanea, enquanto digita, ele já vá aparecendo.
+                string sql = "SELECT * FROM bdvendas.tb_clientes Where nome like @nome";
+
+                //2 Organizando e executando o sql, abrir e executar a Conexão com o banco de dados
+                MySqlCommand executaComando = new MySqlCommand(sql, conexao);
+                executaComando.Parameters.AddWithValue("@nome", nome);
+
+
+                conexao.Open();//Abre a conexão
+                executaComando.ExecuteNonQuery();//Inicializa a conexão
+
+                //Passo 3 - Criando o MySqlDataAdapter para preencher os dados da Datatable, e passado por parametro o Comando com so arquuivos do Banco
+                MySqlDataAdapter da = new MySqlDataAdapter(executaComando);
+                da.FillAsync(tabelaCliente);//Aqui preenche a tabela com as informações/dados
+
+                conexao.Close();
+
+                return tabelaCliente;
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show($"Erro ao listar Cliente. " +
+                    $"Erro: {erro}");
+                return null;// Para retornar vazio
+            }
+        }
+        #endregion
         #region Alterar Cliente
         public void AlterarCliente(Cliente obj)
         {

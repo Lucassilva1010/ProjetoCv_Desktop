@@ -141,5 +141,39 @@ namespace ProjetoCv.br.com.projeto.view
             //Recarega a lista de clientes
             dataGridView_ConsultaCliente.DataSource = cDao.ListarClientes();
         }
+
+        private void tbnPesquisar_Consulta_Click(object sender, EventArgs e)
+        {
+            //Pesquisando por nome
+            string nome = textBoxNomeBuscar.Text.ToLowerInvariant();
+          // int id = int.Parse(textBoxNomeBuscar.Text);//Pesquisar por que a pesquisa por nome não deu certo
+
+            ClienteDao clienteDao = new ClienteDao();
+
+            //dataGridView_ConsultaCliente.DataSource = clienteDao.BuscarClientesPorNome(id);
+            dataGridView_ConsultaCliente.DataSource = clienteDao.BuscarClientesPorNome(nome);
+
+            //Condição para se ele não encontrar nenhum valor, ou tiver em branco a pesquisa, retornar todos os valores da tabela 
+
+            if (dataGridView_ConsultaCliente.Rows.Count == 0)
+            {
+                                //Recarega a lista de clientes
+                dataGridView_ConsultaCliente.DataSource = clienteDao.ListarClientes();
+            }
+
+        }
+
+        private void textBoxNomeBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Esse evendo faz a listagem de nomes por digitação, usando o Evendo KeyPressa das propriedades
+
+            string nomeABuscar = "%" + textBoxNomeBuscar.Text + "%";
+
+            ClienteDao clienteDao = new ClienteDao();
+
+            //dataGridView_ConsultaCliente.DataSource = clienteDao.BuscarClientesPorNome(id);
+            dataGridView_ConsultaCliente.DataSource = clienteDao.ListarClientesPorNomeEletras(nomeABuscar);
+
+        }
     }
 }
