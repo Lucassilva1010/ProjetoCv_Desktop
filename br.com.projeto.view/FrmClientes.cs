@@ -96,7 +96,7 @@ namespace ProjetoCv.br.com.projeto.view
             comboBoxUf.Text = dataGridView_ConsultaCliente.CurrentRow.Cells[13].Value.ToString();
 
             //Ação para quando clicar/selecionar 2x, um cliente listado, mudar para a tela de Cadastro de Clientes
-            tabClientes.SelectedTab = tabPageCadClientes;
+           tabClientes.SelectedTab = tabPageCadClientes;
 
         }
 
@@ -211,6 +211,16 @@ namespace ProjetoCv.br.com.projeto.view
             //Ação para limpar a tela
             //Foi criado uma classe aonde criamos o Metodo para alimpar os controles.
             new Helpers().LimpaTela(this);
+        }
+
+        private void dataGridView_ConsultaCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBoxNomeBuscar_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

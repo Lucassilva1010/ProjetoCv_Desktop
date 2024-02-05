@@ -30,8 +30,15 @@ namespace ProjetoCv.br.com.projeto.view
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabFuncionario = new System.Windows.Forms.TabControl();
             this.tabPageCadFuncionario = new System.Windows.Forms.TabPage();
+            this.cboBoxCargo = new System.Windows.Forms.ComboBox();
+            this.cboBoxTipoAcesso = new System.Windows.Forms.ComboBox();
+            this.lbAcesso = new System.Windows.Forms.Label();
+            this.tbSenha = new System.Windows.Forms.TextBox();
+            this.lbSenha = new System.Windows.Forms.Label();
+            this.lbCargo = new System.Windows.Forms.Label();
             this.btnPesquisarCep = new System.Windows.Forms.Button();
             this.comboBoxUf = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -70,13 +77,6 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cboBoxTipoAcesso = new System.Windows.Forms.ComboBox();
-            this.lbAcesso = new System.Windows.Forms.Label();
-            this.tbSenha = new System.Windows.Forms.TextBox();
-            this.lbSenha = new System.Windows.Forms.Label();
-            this.lbCargo = new System.Windows.Forms.Label();
-            this.cboBoxCargo = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.tabFuncionario.SuspendLayout();
             this.tabPageCadFuncionario.SuspendLayout();
@@ -93,6 +93,17 @@ namespace ProjetoCv.br.com.projeto.view
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1200, 100);
             this.panel1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(55, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(241, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Cadastro de Funcionario";
             // 
             // tabFuncionario
             // 
@@ -150,6 +161,68 @@ namespace ProjetoCv.br.com.projeto.view
             this.tabPageCadFuncionario.Text = "Dados Pessoais";
             this.tabPageCadFuncionario.UseVisualStyleBackColor = true;
             // 
+            // cboBoxCargo
+            // 
+            this.cboBoxCargo.FormattingEnabled = true;
+            this.cboBoxCargo.Items.AddRange(new object[] {
+            "Gerente",
+            "Vendedor"});
+            this.cboBoxCargo.Location = new System.Drawing.Point(739, 288);
+            this.cboBoxCargo.Name = "cboBoxCargo";
+            this.cboBoxCargo.Size = new System.Drawing.Size(200, 28);
+            this.cboBoxCargo.TabIndex = 38;
+            // 
+            // cboBoxTipoAcesso
+            // 
+            this.cboBoxTipoAcesso.FormattingEnabled = true;
+            this.cboBoxTipoAcesso.Items.AddRange(new object[] {
+            "Administrador",
+            "Usuário"});
+            this.cboBoxTipoAcesso.Location = new System.Drawing.Point(433, 285);
+            this.cboBoxTipoAcesso.Name = "cboBoxTipoAcesso";
+            this.cboBoxTipoAcesso.Size = new System.Drawing.Size(200, 28);
+            this.cboBoxTipoAcesso.TabIndex = 37;
+            // 
+            // lbAcesso
+            // 
+            this.lbAcesso.AutoSize = true;
+            this.lbAcesso.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbAcesso.Location = new System.Drawing.Point(305, 288);
+            this.lbAcesso.Name = "lbAcesso";
+            this.lbAcesso.Size = new System.Drawing.Size(124, 20);
+            this.lbAcesso.TabIndex = 36;
+            this.lbAcesso.Text = "Tipo de acesso: ";
+            // 
+            // tbSenha
+            // 
+            this.tbSenha.BackColor = System.Drawing.SystemColors.Window;
+            this.tbSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSenha.Location = new System.Drawing.Point(83, 282);
+            this.tbSenha.Name = "tbSenha";
+            this.tbSenha.PasswordChar = '*';
+            this.tbSenha.Size = new System.Drawing.Size(152, 26);
+            this.tbSenha.TabIndex = 35;
+            // 
+            // lbSenha
+            // 
+            this.lbSenha.AutoSize = true;
+            this.lbSenha.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbSenha.Location = new System.Drawing.Point(17, 284);
+            this.lbSenha.Name = "lbSenha";
+            this.lbSenha.Size = new System.Drawing.Size(60, 20);
+            this.lbSenha.TabIndex = 34;
+            this.lbSenha.Text = "Senha:";
+            // 
+            // lbCargo
+            // 
+            this.lbCargo.AutoSize = true;
+            this.lbCargo.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbCargo.Location = new System.Drawing.Point(678, 288);
+            this.lbCargo.Name = "lbCargo";
+            this.lbCargo.Size = new System.Drawing.Size(56, 20);
+            this.lbCargo.TabIndex = 32;
+            this.lbCargo.Text = "Cargo:";
+            // 
             // btnPesquisarCep
             // 
             this.btnPesquisarCep.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -161,6 +234,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnPesquisarCep.TabIndex = 6;
             this.btnPesquisarCep.Text = "Pesquisar";
             this.btnPesquisarCep.UseVisualStyleBackColor = false;
+            this.btnPesquisarCep.Click += new System.EventHandler(this.btnPesquisarCep_Click);
             // 
             // comboBoxUf
             // 
@@ -451,6 +525,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.dataGridView_TabelaFuncionario.ReadOnly = true;
             this.dataGridView_TabelaFuncionario.Size = new System.Drawing.Size(1152, 257);
             this.dataGridView_TabelaFuncionario.TabIndex = 7;
+            this.dataGridView_TabelaFuncionario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_TabelaFuncionario_CellClick);
             // 
             // tbnPesquisar_Consulta
             // 
@@ -463,6 +538,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.tbnPesquisar_Consulta.TabIndex = 6;
             this.tbnPesquisar_Consulta.Text = "Pesquisar";
             this.tbnPesquisar_Consulta.UseVisualStyleBackColor = false;
+            this.tbnPesquisar_Consulta.Click += new System.EventHandler(this.tbnPesquisar_Consulta_Click);
             // 
             // textBoxNomeBuscar
             // 
@@ -472,6 +548,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.textBoxNomeBuscar.Name = "textBoxNomeBuscar";
             this.textBoxNomeBuscar.Size = new System.Drawing.Size(367, 26);
             this.textBoxNomeBuscar.TabIndex = 5;
+            this.textBoxNomeBuscar.TextChanged += new System.EventHandler(this.textBoxNomeBuscar_TextChanged);
             // 
             // label3
             // 
@@ -494,6 +571,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnEditar.TabIndex = 9;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnExcluir
             // 
@@ -506,6 +584,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnExcluir.TabIndex = 8;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnSalvar
             // 
@@ -518,6 +597,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnSalvar.TabIndex = 7;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnNovo
             // 
@@ -530,79 +610,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnNovo.TabIndex = 6;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(55, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(241, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Cadastro de Funcionario";
-            // 
-            // cboBoxTipoAcesso
-            // 
-            this.cboBoxTipoAcesso.FormattingEnabled = true;
-            this.cboBoxTipoAcesso.Items.AddRange(new object[] {
-            "Administrador",
-            "Usuário"});
-            this.cboBoxTipoAcesso.Location = new System.Drawing.Point(433, 285);
-            this.cboBoxTipoAcesso.Name = "cboBoxTipoAcesso";
-            this.cboBoxTipoAcesso.Size = new System.Drawing.Size(200, 28);
-            this.cboBoxTipoAcesso.TabIndex = 37;
-            // 
-            // lbAcesso
-            // 
-            this.lbAcesso.AutoSize = true;
-            this.lbAcesso.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbAcesso.Location = new System.Drawing.Point(305, 288);
-            this.lbAcesso.Name = "lbAcesso";
-            this.lbAcesso.Size = new System.Drawing.Size(124, 20);
-            this.lbAcesso.TabIndex = 36;
-            this.lbAcesso.Text = "Tipo de acesso: ";
-            // 
-            // tbSenha
-            // 
-            this.tbSenha.BackColor = System.Drawing.SystemColors.Window;
-            this.tbSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSenha.Location = new System.Drawing.Point(745, 287);
-            this.tbSenha.Name = "tbSenha";
-            this.tbSenha.PasswordChar = '*';
-            this.tbSenha.Size = new System.Drawing.Size(152, 26);
-            this.tbSenha.TabIndex = 35;
-            // 
-            // lbSenha
-            // 
-            this.lbSenha.AutoSize = true;
-            this.lbSenha.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbSenha.Location = new System.Drawing.Point(679, 289);
-            this.lbSenha.Name = "lbSenha";
-            this.lbSenha.Size = new System.Drawing.Size(60, 20);
-            this.lbSenha.TabIndex = 34;
-            this.lbSenha.Text = "Senha:";
-            // 
-            // lbCargo
-            // 
-            this.lbCargo.AutoSize = true;
-            this.lbCargo.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbCargo.Location = new System.Drawing.Point(17, 287);
-            this.lbCargo.Name = "lbCargo";
-            this.lbCargo.Size = new System.Drawing.Size(56, 20);
-            this.lbCargo.TabIndex = 32;
-            this.lbCargo.Text = "Cargo:";
-            // 
-            // cboBoxCargo
-            // 
-            this.cboBoxCargo.FormattingEnabled = true;
-            this.cboBoxCargo.Items.AddRange(new object[] {
-            "Gerente",
-            "Vendedor"});
-            this.cboBoxCargo.Location = new System.Drawing.Point(78, 287);
-            this.cboBoxCargo.Name = "cboBoxCargo";
-            this.cboBoxCargo.Size = new System.Drawing.Size(200, 28);
-            this.cboBoxCargo.TabIndex = 38;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // FrmFuncionario
             // 
@@ -620,6 +628,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmFuncionario";
             this.Text = "Cadastro de Funcionarios";
+            this.Load += new System.EventHandler(this.FrmFuncionario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabFuncionario.ResumeLayout(false);

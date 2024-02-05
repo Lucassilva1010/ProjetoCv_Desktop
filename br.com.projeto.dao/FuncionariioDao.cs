@@ -191,7 +191,7 @@ namespace ProjetoCv.br.com.projeto.dao
                 //Passo 2 - Organizar o SQL
                 MySqlCommand executaComando = new MySqlCommand(sql, conexao);
                 //Configurar os atributos para receber o quye vem da classe(Objeto) Cliente
-
+                executaComando.Parameters.AddWithValue("@id", obj.ID);
                 executaComando.Parameters.AddWithValue("@nome", obj.Nome);
                 executaComando.Parameters.AddWithValue("@rg", obj.Rg);
                 executaComando.Parameters.AddWithValue("@cpf", obj.Cpf);

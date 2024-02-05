@@ -33,6 +33,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.label1 = new System.Windows.Forms.Label();
             this.tabClientes = new System.Windows.Forms.TabControl();
             this.tabPageCadClientes = new System.Windows.Forms.TabPage();
+            this.btnPesquisarCep = new System.Windows.Forms.Button();
             this.comboBoxUf = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbCidade = new System.Windows.Forms.TextBox();
@@ -70,7 +71,6 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btnPesquisarCep = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabClientes.SuspendLayout();
             this.tabPageCadClientes.SuspendLayout();
@@ -148,6 +148,19 @@ namespace ProjetoCv.br.com.projeto.view
             this.tabPageCadClientes.TabIndex = 0;
             this.tabPageCadClientes.Text = "Dados Pessoais";
             this.tabPageCadClientes.UseVisualStyleBackColor = true;
+            // 
+            // btnPesquisarCep
+            // 
+            this.btnPesquisarCep.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnPesquisarCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisarCep.ForeColor = System.Drawing.Color.White;
+            this.btnPesquisarCep.Location = new System.Drawing.Point(210, 164);
+            this.btnPesquisarCep.Name = "btnPesquisarCep";
+            this.btnPesquisarCep.Size = new System.Drawing.Size(92, 33);
+            this.btnPesquisarCep.TabIndex = 6;
+            this.btnPesquisarCep.Text = "Pesquisar";
+            this.btnPesquisarCep.UseVisualStyleBackColor = false;
+            this.btnPesquisarCep.Click += new System.EventHandler(this.btnPesquisarCep_Click);
             // 
             // comboBoxUf
             // 
@@ -463,6 +476,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.textBoxNomeBuscar.Name = "textBoxNomeBuscar";
             this.textBoxNomeBuscar.Size = new System.Drawing.Size(367, 26);
             this.textBoxNomeBuscar.TabIndex = 5;
+            this.textBoxNomeBuscar.TextChanged += new System.EventHandler(this.textBoxNomeBuscar_TextChanged);
             this.textBoxNomeBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNomeBuscar_KeyPress);
             // 
             // label3
@@ -526,19 +540,6 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnPesquisarCep
-            // 
-            this.btnPesquisarCep.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnPesquisarCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisarCep.ForeColor = System.Drawing.Color.White;
-            this.btnPesquisarCep.Location = new System.Drawing.Point(210, 164);
-            this.btnPesquisarCep.Name = "btnPesquisarCep";
-            this.btnPesquisarCep.Size = new System.Drawing.Size(92, 33);
-            this.btnPesquisarCep.TabIndex = 6;
-            this.btnPesquisarCep.Text = "Pesquisar";
-            this.btnPesquisarCep.UseVisualStyleBackColor = false;
-            this.btnPesquisarCep.Click += new System.EventHandler(this.btnPesquisarCep_Click);
             // 
             // FrmClientes
             // 
