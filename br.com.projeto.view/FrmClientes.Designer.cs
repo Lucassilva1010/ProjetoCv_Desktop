@@ -317,7 +317,7 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             this.maskedTBCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.maskedTBCpf.Location = new System.Drawing.Point(706, 71);
-            this.maskedTBCpf.Mask = "###.###.###-##";
+            this.maskedTBCpf.Mask = "###,###,###-##";
             this.maskedTBCpf.Name = "maskedTBCpf";
             this.maskedTBCpf.Size = new System.Drawing.Size(114, 26);
             this.maskedTBCpf.TabIndex = 15;
@@ -326,7 +326,7 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             this.maskedTbRG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.maskedTbRG.Location = new System.Drawing.Point(506, 70);
-            this.maskedTbRG.Mask = "##.###.###-##";
+            this.maskedTbRG.Mask = "##,###,###-##";
             this.maskedTbRG.Name = "maskedTbRG";
             this.maskedTbRG.Size = new System.Drawing.Size(114, 26);
             this.maskedTbRG.TabIndex = 14;

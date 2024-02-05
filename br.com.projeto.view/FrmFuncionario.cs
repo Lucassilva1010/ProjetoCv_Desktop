@@ -61,17 +61,18 @@ namespace ProjetoCv.br.com.projeto.view
             string nome = textBoxNomeBuscar.Text.ToLowerInvariant();
             // int id = int.Parse(textBoxNomeBuscar.Text);//Pesquisar por que a pesquisa por nome não deu certo
 
-            ClienteDao clienteDao = new ClienteDao();
+            FuncionariioDao funcionarioDao = new FuncionariioDao();
 
             //dataGridView_ConsultaCliente.DataSource = clienteDao.BuscarClientesPorNome(id);
-            dataGridView_TabelaFuncionario.DataSource = clienteDao.BuscarClientesPorNome(nome);
+            dataGridView_TabelaFuncionario.DataSource = funcionarioDao.BuscarFuncionariosPorNome(nome);
 
             //Condição para se ele não encontrar nenhum valor, ou tiver em branco a pesquisa, retornar todos os valores da tabela 
 
-            if (dataGridView_TabelaFuncionario.Rows.Count == 0)
+            if (dataGridView_TabelaFuncionario.Rows.Count == 0 || textBoxNomeBuscar.Text == string.Empty)
             {
                 //Recarega a lista de clientes
-                dataGridView_TabelaFuncionario.DataSource = clienteDao.ListarClientes();
+                MessageBox.Show("Funcionário Não encontrado ");
+                dataGridView_TabelaFuncionario.DataSource = funcionarioDao.ListarFuncionarios();
             }
 
         }
@@ -198,10 +199,6 @@ namespace ProjetoCv.br.com.projeto.view
             tbBairro.Text = dataGridView_TabelaFuncionario.CurrentRow.Cells[14].Value.ToString();
             tbCidade.Text = dataGridView_TabelaFuncionario.CurrentRow.Cells[15].Value.ToString();
             comboBoxUf.Text = dataGridView_TabelaFuncionario.CurrentRow.Cells[16].Value.ToString();
-
-
-
-
 
             //Ação para quando clicar/selecionar 2x, um cliente listado, mudar para a tela de Cadastro de Clientes
             tabFuncionario.SelectedTab = tabPageCadFuncionario;

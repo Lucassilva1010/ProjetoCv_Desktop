@@ -155,7 +155,7 @@ namespace ProjetoCv.br.com.projeto.view
 
             //Condição para se ele não encontrar nenhum valor, ou tiver em branco a pesquisa, retornar todos os valores da tabela 
 
-            if (dataGridView_ConsultaCliente.Rows.Count == 0)
+            if (dataGridView_ConsultaCliente.Rows.Count == 0 || textBoxNomeBuscar.Text == string.Empty)
             {
                                 //Recarega a lista de clientes
                 dataGridView_ConsultaCliente.DataSource = clienteDao.ListarClientes();
