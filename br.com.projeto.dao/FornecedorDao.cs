@@ -72,7 +72,7 @@ namespace ProjetoCv.br.com.projeto.dao
         #endregion
 
         #region Listar Fornecedores
-        public DataTable ListarFuncionarios()
+        public DataTable ListarFornecedores()
         {
             try
             {
@@ -183,7 +183,7 @@ namespace ProjetoCv.br.com.projeto.dao
             try
             {
                 //Passo 1 - Comando Sql para inserir os dados no Banco
-                string sql = @"Update tb_funcionarios set nome=@nome,cnpj=@cnpj,email=@email,telefone=@telefone,celular=@celular,cep=@cep,endereco=@endereco,numero=@numero,
+                string sql = @"Update tb_fornecedores set nome=@nome,cnpj=@cnpj,email=@email,telefone=@telefone,celular=@celular,cep=@cep,endereco=@endereco,numero=@numero,
                                 complemento=@complemento,bairro=@bairro,cidade=@cidade,estado=@estado
                                     Where id=@id";//Esse parametro é para receber os valores que vem da tela
 

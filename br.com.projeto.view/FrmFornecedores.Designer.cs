@@ -428,6 +428,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.dataGridView_TabelaFornecedores.ReadOnly = true;
             this.dataGridView_TabelaFornecedores.Size = new System.Drawing.Size(1045, 222);
             this.dataGridView_TabelaFornecedores.TabIndex = 7;
+            this.dataGridView_TabelaFornecedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_TabelaFornecedores_CellClick);
             // 
             // tbnPesquisar_Consulta
             // 
@@ -440,6 +441,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.tbnPesquisar_Consulta.TabIndex = 6;
             this.tbnPesquisar_Consulta.Text = "Pesquisar";
             this.tbnPesquisar_Consulta.UseVisualStyleBackColor = false;
+            this.tbnPesquisar_Consulta.Click += new System.EventHandler(this.tbnPesquisar_Consulta_Click);
             // 
             // textBoxNomeBuscar
             // 
@@ -449,6 +451,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.textBoxNomeBuscar.Name = "textBoxNomeBuscar";
             this.textBoxNomeBuscar.Size = new System.Drawing.Size(367, 26);
             this.textBoxNomeBuscar.TabIndex = 5;
+            this.textBoxNomeBuscar.TextChanged += new System.EventHandler(this.textBoxNomeBuscar_TextChanged);
             // 
             // label3
             // 
@@ -471,6 +474,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnEditar.TabIndex = 13;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnExcluir
             // 
@@ -483,6 +487,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnExcluir.TabIndex = 12;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnSalvar
             // 
@@ -495,6 +500,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnSalvar.TabIndex = 11;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnNovo
             // 
@@ -524,6 +530,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmFornecedores";
             this.Text = "Cadastro de Fornecedores";
+            this.Load += new System.EventHandler(this.FrmFornecedores_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabFornecedor.ResumeLayout(false);
