@@ -19,7 +19,8 @@ namespace ProjetoCv
             Application.SetCompatibleTextRenderingDefault(false);
            // Application.Run(new FrmClientes());
             //Application.Run(new FrmFuncionario());
-            Application.Run(new FrmFornecedores());
+            //Application.Run(new FrmFornecedores());
+            Application.Run(new FrmProdutos());
         }
     }
 }
