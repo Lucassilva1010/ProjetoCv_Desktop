@@ -32,7 +32,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.labelProdutos = new System.Windows.Forms.Label();
             this.panelProdutos = new System.Windows.Forms.Panel();
             this.tabProdutos = new System.Windows.Forms.TabControl();
-            this.tabPageCadFornecedor = new System.Windows.Forms.TabPage();
+            this.tabPageCadProduto = new System.Windows.Forms.TabPage();
             this.comboBoxFornecedorFk = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbQtdEstoque = new System.Windows.Forms.TextBox();
@@ -54,7 +54,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnNovo = new System.Windows.Forms.Button();
             this.panelProdutos.SuspendLayout();
             this.tabProdutos.SuspendLayout();
-            this.tabPageCadFornecedor.SuspendLayout();
+            this.tabPageCadProduto.SuspendLayout();
             this.tabPageFornecedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_TabelaProduto)).BeginInit();
             this.SuspendLayout();
@@ -84,7 +84,7 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             // tabProdutos
             // 
-            this.tabProdutos.Controls.Add(this.tabPageCadFornecedor);
+            this.tabProdutos.Controls.Add(this.tabPageCadProduto);
             this.tabProdutos.Controls.Add(this.tabPageFornecedor);
             this.tabProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabProdutos.Location = new System.Drawing.Point(12, 175);
@@ -93,25 +93,25 @@ namespace ProjetoCv.br.com.projeto.view
             this.tabProdutos.Size = new System.Drawing.Size(1155, 254);
             this.tabProdutos.TabIndex = 4;
             // 
-            // tabPageCadFornecedor
+            // tabPageCadProduto
             // 
-            this.tabPageCadFornecedor.Controls.Add(this.comboBoxFornecedorFk);
-            this.tabPageCadFornecedor.Controls.Add(this.label4);
-            this.tabPageCadFornecedor.Controls.Add(this.tbQtdEstoque);
-            this.tabPageCadFornecedor.Controls.Add(this.lbQtdEstoque);
-            this.tabPageCadFornecedor.Controls.Add(this.tbPreco);
-            this.tabPageCadFornecedor.Controls.Add(this.lbPreco);
-            this.tabPageCadFornecedor.Controls.Add(this.tbDescricao);
-            this.tabPageCadFornecedor.Controls.Add(this.lbDescricao);
-            this.tabPageCadFornecedor.Controls.Add(this.tbCodigo);
-            this.tabPageCadFornecedor.Controls.Add(this.labCodigo);
-            this.tabPageCadFornecedor.Location = new System.Drawing.Point(4, 29);
-            this.tabPageCadFornecedor.Name = "tabPageCadFornecedor";
-            this.tabPageCadFornecedor.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCadFornecedor.Size = new System.Drawing.Size(1147, 221);
-            this.tabPageCadFornecedor.TabIndex = 0;
-            this.tabPageCadFornecedor.Text = "Dados do Produto";
-            this.tabPageCadFornecedor.UseVisualStyleBackColor = true;
+            this.tabPageCadProduto.Controls.Add(this.comboBoxFornecedorFk);
+            this.tabPageCadProduto.Controls.Add(this.label4);
+            this.tabPageCadProduto.Controls.Add(this.tbQtdEstoque);
+            this.tabPageCadProduto.Controls.Add(this.lbQtdEstoque);
+            this.tabPageCadProduto.Controls.Add(this.tbPreco);
+            this.tabPageCadProduto.Controls.Add(this.lbPreco);
+            this.tabPageCadProduto.Controls.Add(this.tbDescricao);
+            this.tabPageCadProduto.Controls.Add(this.lbDescricao);
+            this.tabPageCadProduto.Controls.Add(this.tbCodigo);
+            this.tabPageCadProduto.Controls.Add(this.labCodigo);
+            this.tabPageCadProduto.Location = new System.Drawing.Point(4, 29);
+            this.tabPageCadProduto.Name = "tabPageCadProduto";
+            this.tabPageCadProduto.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageCadProduto.Size = new System.Drawing.Size(1147, 221);
+            this.tabPageCadProduto.TabIndex = 0;
+            this.tabPageCadProduto.Text = "Dados do Produto";
+            this.tabPageCadProduto.UseVisualStyleBackColor = true;
             // 
             // comboBoxFornecedorFk
             // 
@@ -229,8 +229,9 @@ namespace ProjetoCv.br.com.projeto.view
             this.dataGridView_TabelaProduto.Location = new System.Drawing.Point(4, 52);
             this.dataGridView_TabelaProduto.Name = "dataGridView_TabelaProduto";
             this.dataGridView_TabelaProduto.ReadOnly = true;
-            this.dataGridView_TabelaProduto.Size = new System.Drawing.Size(1045, 222);
+            this.dataGridView_TabelaProduto.Size = new System.Drawing.Size(1137, 154);
             this.dataGridView_TabelaProduto.TabIndex = 7;
+            this.dataGridView_TabelaProduto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_TabelaProduto_CellClick);
             // 
             // tbnPesquisar_Consulta
             // 
@@ -243,6 +244,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.tbnPesquisar_Consulta.TabIndex = 6;
             this.tbnPesquisar_Consulta.Text = "Pesquisar";
             this.tbnPesquisar_Consulta.UseVisualStyleBackColor = false;
+            this.tbnPesquisar_Consulta.Click += new System.EventHandler(this.tbnPesquisar_Consulta_Click);
             // 
             // textBoxNomeBuscar
             // 
@@ -252,6 +254,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.textBoxNomeBuscar.Name = "textBoxNomeBuscar";
             this.textBoxNomeBuscar.Size = new System.Drawing.Size(367, 26);
             this.textBoxNomeBuscar.TabIndex = 5;
+            this.textBoxNomeBuscar.TextChanged += new System.EventHandler(this.textBoxNomeBuscar_TextChanged);
             // 
             // label3
             // 
@@ -274,6 +277,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnEditar.TabIndex = 17;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnExcluir
             // 
@@ -286,6 +290,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnExcluir.TabIndex = 16;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnSalvar
             // 
@@ -298,6 +303,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnSalvar.TabIndex = 15;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnNovo
             // 
@@ -331,8 +337,8 @@ namespace ProjetoCv.br.com.projeto.view
             this.panelProdutos.ResumeLayout(false);
             this.panelProdutos.PerformLayout();
             this.tabProdutos.ResumeLayout(false);
-            this.tabPageCadFornecedor.ResumeLayout(false);
-            this.tabPageCadFornecedor.PerformLayout();
+            this.tabPageCadProduto.ResumeLayout(false);
+            this.tabPageCadProduto.PerformLayout();
             this.tabPageFornecedor.ResumeLayout(false);
             this.tabPageFornecedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_TabelaProduto)).EndInit();
@@ -345,7 +351,7 @@ namespace ProjetoCv.br.com.projeto.view
         private System.Windows.Forms.Label labelProdutos;
         private System.Windows.Forms.Panel panelProdutos;
         private System.Windows.Forms.TabControl tabProdutos;
-        private System.Windows.Forms.TabPage tabPageCadFornecedor;
+        private System.Windows.Forms.TabPage tabPageCadProduto;
         private System.Windows.Forms.ComboBox comboBoxFornecedorFk;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbQtdEstoque;
