@@ -20,7 +20,7 @@ namespace ProjetoCv
            // Application.Run(new FrmClientes());
             //Application.Run(new FrmFuncionario());
             //Application.Run(new FrmFornecedores());
-            Application.Run(new FrmProdutos());
+            Application.Run(new FrmVendas());
         }
     }
 }
