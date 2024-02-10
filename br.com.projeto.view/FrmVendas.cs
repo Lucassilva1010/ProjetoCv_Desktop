@@ -15,10 +15,10 @@ namespace ProjetoCv.br.com.projeto.view
     public partial class FrmVendas : Form
     {
         //Foi necessario a criação de 2 Objetos aqui, para que haja interações com as propriedades
-
+        // Objeto Cliente
         Cliente objCliente = new Cliente();
         ClienteDao objClienteDao = new ClienteDao();
-
+        // Objeto Produto
         Produto objProduto = new Produto();
         ProdutoDao objProDao = new ProdutoDao();
 
@@ -55,7 +55,6 @@ namespace ProjetoCv.br.com.projeto.view
 
                 tbDescricaoProduto_Vendas.Text = objProduto.Descricao;//Isso ira mostrar o nome do cliente na tela 
                 tbPrecoProduto_vendas.Text = objProduto.Preco.ToString();//Isso ira mostrar o nome do cliente na tela 
-                tbQtdEstoqueProduto_Vendas.Text = objProduto.QtdEstoque.ToString();//Isso ira mostrar o nome do cliente na tela 
             }
         }
     }

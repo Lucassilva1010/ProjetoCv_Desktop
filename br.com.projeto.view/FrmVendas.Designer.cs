@@ -203,7 +203,7 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             this.tbPrecoProduto_vendas.BackColor = System.Drawing.SystemColors.Window;
             this.tbPrecoProduto_vendas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbPrecoProduto_vendas.Location = new System.Drawing.Point(88, 130);
+            this.tbPrecoProduto_vendas.Location = new System.Drawing.Point(124, 130);
             this.tbPrecoProduto_vendas.Name = "tbPrecoProduto_vendas";
             this.tbPrecoProduto_vendas.Size = new System.Drawing.Size(120, 26);
             this.tbPrecoProduto_vendas.TabIndex = 11;
@@ -214,15 +214,15 @@ namespace ProjetoCv.br.com.projeto.view
             this.lbPreco.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lbPreco.Location = new System.Drawing.Point(25, 132);
             this.lbPreco.Name = "lbPreco";
-            this.lbPreco.Size = new System.Drawing.Size(60, 20);
+            this.lbPreco.Size = new System.Drawing.Size(100, 20);
             this.lbPreco.TabIndex = 10;
-            this.lbPreco.Text = "Preço:";
+            this.lbPreco.Text = "Preço (R$):";
             // 
             // tbQtdEstoqueProduto_Vendas
             // 
             this.tbQtdEstoqueProduto_Vendas.BackColor = System.Drawing.SystemColors.Window;
             this.tbQtdEstoqueProduto_Vendas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbQtdEstoqueProduto_Vendas.Location = new System.Drawing.Point(342, 131);
+            this.tbQtdEstoqueProduto_Vendas.Location = new System.Drawing.Point(381, 131);
             this.tbQtdEstoqueProduto_Vendas.Name = "tbQtdEstoqueProduto_Vendas";
             this.tbQtdEstoqueProduto_Vendas.Size = new System.Drawing.Size(83, 26);
             this.tbQtdEstoqueProduto_Vendas.TabIndex = 23;
@@ -231,7 +231,7 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             this.lbQtdEstoqueVendas.AutoSize = true;
             this.lbQtdEstoqueVendas.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbQtdEstoqueVendas.Location = new System.Drawing.Point(224, 133);
+            this.lbQtdEstoqueVendas.Location = new System.Drawing.Point(263, 133);
             this.lbQtdEstoqueVendas.Name = "lbQtdEstoqueVendas";
             this.lbQtdEstoqueVendas.Size = new System.Drawing.Size(120, 20);
             this.lbQtdEstoqueVendas.TabIndex = 22;

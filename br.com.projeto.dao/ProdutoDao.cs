@@ -248,7 +248,7 @@ namespace ProjetoCv.br.com.projeto.dao
         }
         #endregion
 
-        #region
+        #region Retorna Objeto de 1 Cliente pelo ID
         public Produto RetornaProdutosPorCodigo(int id)
         {
             try
@@ -275,13 +275,12 @@ namespace ProjetoCv.br.com.projeto.dao
                     objProduto.ID = dados.GetInt32("id");
                     objProduto.Descricao = dados.GetString("descricao");
                     objProduto.Preco = dados.GetDecimal("preco");
-                    objProduto.QtdEstoque = dados.GetInt32("qtd_estoque");
                     conexao.Close();
                     return objProduto;//Aqui vai todo o objeto montado com os dados que selecionei
                 }
                 else
                 {
-                    MessageBox.Show($"Erro ao listar os Produtos. ");
+                    MessageBox.Show($"Nenhum Produto encontrado! ");
                     return null;// Para retornar vazio
                 }
             }
