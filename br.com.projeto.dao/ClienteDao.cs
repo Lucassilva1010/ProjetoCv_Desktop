@@ -84,7 +84,7 @@ namespace ProjetoCv.br.com.projeto.dao
                 string sql = "SELECT * FROM bdvendas.tb_clientes;";
 
                 //2 Organizando e executando o sql, e brir e executar a Conexão com o banco de dados
-                MySqlCommand executaComando = new MySqlCommand(sql, conexao);                           
+                MySqlCommand executaComando = new MySqlCommand(sql, conexao);
                 conexao.Open();//Abre a conexão
                 executaComando.ExecuteNonQuery();//Inicializa a conexão
 
@@ -117,8 +117,8 @@ namespace ProjetoCv.br.com.projeto.dao
 
                 //2 Organizando e executando o sql, abrir e executar a Conexão com o banco de dados
                 MySqlCommand executaComando = new MySqlCommand(sql, conexao);
-                executaComando.Parameters.AddWithValue("@nome",nome);
-             
+                executaComando.Parameters.AddWithValue("@nome", nome);
+
 
                 conexao.Open();//Abre a conexão
                 executaComando.ExecuteNonQuery();//Inicializa a conexão
@@ -261,6 +261,51 @@ namespace ProjetoCv.br.com.projeto.dao
         }
         #endregion
 
-        //Buscar Cliente por ID ou qualquer outro modo que deseje
+        #region    Retorna Cliente por CPF 
+        public Cliente RetornaClientePorCPF(string cpf)//O retorno aqui será um objeto do tipo cliente
+        {
+            try
+            {
+                Cliente objCliente = new Cliente();
+
+                //1  Criando o DataTable que é o comendo Sql
+                DataTable tabelaCliente = new DataTable();
+
+                string sql = "SELECT * FROM bdvendas.tb_clientes Where cpf=@cpf";
+
+                //2 Organizando e executando o sql, abrir e executar a Conexão com o banco de dados
+                MySqlCommand executaComando = new MySqlCommand(sql, conexao);
+                executaComando.Parameters.AddWithValue("@cpf", cpf);
+
+                conexao.Open();//Abre a conexão
+
+                //é usado nesse metodo uma nova forma de ler os dados, pois aqui precisamos dos ados de apenas 1 Cliente,
+                // e que seja retornado todos os seus campos, ou campos selecionados
+                MySqlDataReader dados = executaComando.ExecuteReader();
+
+                //Verificação para analisar se tem dados buscados pelo do DataReader
+                if (dados.Read())
+                {
+                    objCliente.ID = dados.GetInt32("id");
+                    objCliente.Nome = dados.GetString("nome");
+                    conexao.Close();
+                    return objCliente;
+                }
+                else
+                {
+                    MessageBox.Show($"Clientenão encontrado! ");
+                    conexao.Close();
+                    return null;
+                }
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show($"Erro ao Mostrar o Cliente. " +
+                    $"Erro: {erro}");
+                return null;// Para retornar vazio
+            }
+        }
+        #endregion
     }
 }

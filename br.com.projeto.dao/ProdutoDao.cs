@@ -247,5 +247,52 @@ namespace ProjetoCv.br.com.projeto.dao
 
         }
         #endregion
+
+        #region
+        public Produto RetornaProdutosPorCodigo(int id)
+        {
+            try
+            {
+
+                Produto objProduto = new Produto();
+
+                //1  Criando conexão para Sql
+                string sql = "SELECT * FROM bdvendas.tb_produtos Where id=@id";
+
+                //2 Organizando e executando o sql, abrir e executar a Conexão com o banco de dados
+                MySqlCommand executaComando = new MySqlCommand(sql, conexao);
+                executaComando.Parameters.AddWithValue("@id", id);
+
+                conexao.Open();//Abre a conexão
+
+                //é usado nesse metodo uma nova forma de ler os dados, pois aqui precisamos dos ados de apenas 1 Cliente,
+                // e que seja retornado todos os seus campos, ou campos selecionados
+                MySqlDataReader dados = executaComando.ExecuteReader();
+
+                if (dados.Read())
+                {
+                    //aqui montei o retorno dos dados que desejo que seja mostrado na tela
+                    objProduto.ID = dados.GetInt32("id");
+                    objProduto.Descricao = dados.GetString("descricao");
+                    objProduto.Preco = dados.GetDecimal("preco");
+                    objProduto.QtdEstoque = dados.GetInt32("qtd_estoque");
+                    conexao.Close();
+                    return objProduto;//Aqui vai todo o objeto montado com os dados que selecionei
+                }
+                else
+                {
+                    MessageBox.Show($"Erro ao listar os Produtos. ");
+                    return null;// Para retornar vazio
+                }
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show($"Erro ao listar os Produtos. " +
+                    $"Erro: {erro}");
+                return null;// Para retornar vazio
+            }
+        }
+        #endregion
     }
 }

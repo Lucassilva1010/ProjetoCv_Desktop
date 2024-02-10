@@ -33,7 +33,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.labelVendas = new System.Windows.Forms.Label();
             this.groupBoxCliente = new System.Windows.Forms.GroupBox();
             this.groupBoxProduto = new System.Windows.Forms.GroupBox();
-            this.maskedTBCpfClienteVendas = new System.Windows.Forms.MaskedTextBox();
+            this.maskTBCpfClienteVendas = new System.Windows.Forms.MaskedTextBox();
             this.lbCpf = new System.Windows.Forms.Label();
             this.tbNomeClienteVendas = new System.Windows.Forms.TextBox();
             this.lbNome = new System.Windows.Forms.Label();
@@ -53,6 +53,8 @@ namespace ProjetoCv.br.com.projeto.view
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancelar_vendas = new System.Windows.Forms.Button();
             this.buttonPagamento_vendas = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelProdutos.SuspendLayout();
             this.groupBoxCliente.SuspendLayout();
             this.groupBoxProduto.SuspendLayout();
@@ -85,14 +87,16 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             // groupBoxCliente
             // 
+            this.groupBoxCliente.Controls.Add(this.textBox2);
+            this.groupBoxCliente.Controls.Add(this.label2);
             this.groupBoxCliente.Controls.Add(this.tbNomeClienteVendas);
             this.groupBoxCliente.Controls.Add(this.lbNome);
-            this.groupBoxCliente.Controls.Add(this.maskedTBCpfClienteVendas);
+            this.groupBoxCliente.Controls.Add(this.maskTBCpfClienteVendas);
             this.groupBoxCliente.Controls.Add(this.lbCpf);
             this.groupBoxCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxCliente.Location = new System.Drawing.Point(12, 128);
             this.groupBoxCliente.Name = "groupBoxCliente";
-            this.groupBoxCliente.Size = new System.Drawing.Size(483, 152);
+            this.groupBoxCliente.Size = new System.Drawing.Size(483, 183);
             this.groupBoxCliente.TabIndex = 5;
             this.groupBoxCliente.TabStop = false;
             this.groupBoxCliente.Text = "Cliente";
@@ -110,27 +114,28 @@ namespace ProjetoCv.br.com.projeto.view
             this.groupBoxProduto.Controls.Add(this.tbCodigoProduto_vendas);
             this.groupBoxProduto.Controls.Add(this.labCodigo);
             this.groupBoxProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxProduto.Location = new System.Drawing.Point(12, 296);
+            this.groupBoxProduto.Location = new System.Drawing.Point(12, 317);
             this.groupBoxProduto.Name = "groupBoxProduto";
             this.groupBoxProduto.Size = new System.Drawing.Size(483, 280);
             this.groupBoxProduto.TabIndex = 6;
             this.groupBoxProduto.TabStop = false;
             this.groupBoxProduto.Text = "Produto";
             // 
-            // maskedTBCpfClienteVendas
+            // maskTBCpfClienteVendas
             // 
-            this.maskedTBCpfClienteVendas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.maskedTBCpfClienteVendas.Location = new System.Drawing.Point(66, 35);
-            this.maskedTBCpfClienteVendas.Mask = "###,###,###-##";
-            this.maskedTBCpfClienteVendas.Name = "maskedTBCpfClienteVendas";
-            this.maskedTBCpfClienteVendas.Size = new System.Drawing.Size(142, 26);
-            this.maskedTBCpfClienteVendas.TabIndex = 17;
+            this.maskTBCpfClienteVendas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.maskTBCpfClienteVendas.Location = new System.Drawing.Point(80, 98);
+            this.maskTBCpfClienteVendas.Mask = "###,###,###-##";
+            this.maskTBCpfClienteVendas.Name = "maskTBCpfClienteVendas";
+            this.maskTBCpfClienteVendas.Size = new System.Drawing.Size(142, 26);
+            this.maskTBCpfClienteVendas.TabIndex = 17;
+            this.maskTBCpfClienteVendas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.maskedTBCpfClienteVendas_KeyPress);
             // 
             // lbCpf
             // 
             this.lbCpf.AutoSize = true;
             this.lbCpf.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbCpf.Location = new System.Drawing.Point(16, 39);
+            this.lbCpf.Location = new System.Drawing.Point(30, 101);
             this.lbCpf.Name = "lbCpf";
             this.lbCpf.Size = new System.Drawing.Size(48, 20);
             this.lbCpf.TabIndex = 16;
@@ -140,7 +145,7 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             this.tbNomeClienteVendas.BackColor = System.Drawing.SystemColors.Window;
             this.tbNomeClienteVendas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbNomeClienteVendas.Location = new System.Drawing.Point(79, 88);
+            this.tbNomeClienteVendas.Location = new System.Drawing.Point(80, 130);
             this.tbNomeClienteVendas.Name = "tbNomeClienteVendas";
             this.tbNomeClienteVendas.Size = new System.Drawing.Size(308, 26);
             this.tbNomeClienteVendas.TabIndex = 19;
@@ -149,7 +154,7 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             this.lbNome.AutoSize = true;
             this.lbNome.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbNome.Location = new System.Drawing.Point(16, 88);
+            this.lbNome.Location = new System.Drawing.Point(17, 133);
             this.lbNome.Name = "lbNome";
             this.lbNome.Size = new System.Drawing.Size(60, 20);
             this.lbNome.TabIndex = 18;
@@ -163,6 +168,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.tbCodigoProduto_vendas.Name = "tbCodigoProduto_vendas";
             this.tbCodigoProduto_vendas.Size = new System.Drawing.Size(108, 26);
             this.tbCodigoProduto_vendas.TabIndex = 3;
+            this.tbCodigoProduto_vendas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCodigoProduto_vendas_KeyPress);
             // 
             // labCodigo
             // 
@@ -286,7 +292,7 @@ namespace ProjetoCv.br.com.projeto.view
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label1.Location = new System.Drawing.Point(82, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 20);
@@ -316,6 +322,25 @@ namespace ProjetoCv.br.com.projeto.view
             this.buttonPagamento_vendas.TabIndex = 26;
             this.buttonPagamento_vendas.Text = "Adicionar Item";
             this.buttonPagamento_vendas.UseVisualStyleBackColor = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Location = new System.Drawing.Point(61, 48);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(308, 26);
+            this.textBox2.TabIndex = 21;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label2.Location = new System.Drawing.Point(58, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(145, 20);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Data da Compra:";
             // 
             // FrmVendas
             // 
@@ -352,7 +377,7 @@ namespace ProjetoCv.br.com.projeto.view
         private System.Windows.Forms.Label labelVendas;
         private System.Windows.Forms.GroupBox groupBoxCliente;
         private System.Windows.Forms.GroupBox groupBoxProduto;
-        private System.Windows.Forms.MaskedTextBox maskedTBCpfClienteVendas;
+        private System.Windows.Forms.MaskedTextBox maskTBCpfClienteVendas;
         private System.Windows.Forms.Label lbCpf;
         private System.Windows.Forms.TextBox tbNomeClienteVendas;
         private System.Windows.Forms.Label lbNome;
@@ -372,5 +397,7 @@ namespace ProjetoCv.br.com.projeto.view
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancelar_vendas;
         private System.Windows.Forms.Button buttonPagamento_vendas;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label2;
     }
 }
