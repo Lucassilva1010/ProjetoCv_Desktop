@@ -190,6 +190,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnRemoverItem_vendas.TabIndex = 25;
             this.btnRemoverItem_vendas.Text = "Remover Item";
             this.btnRemoverItem_vendas.UseVisualStyleBackColor = false;
+            this.btnRemoverItem_vendas.Click += new System.EventHandler(this.btnRemoverItem_vendas_Click);
             // 
             // btnAdicionarItem_Vendas
             // 

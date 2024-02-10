@@ -100,6 +100,31 @@ namespace ProjetoCv.br.com.projeto.view
             tbPrecoProduto_vendas.Clear();
         }
 
+        private void btnRemoverItem_vendas_Click(object sender, EventArgs e)
+        {
+            //Ação para remover Itens do carrinho
+            //1ª Pegar o valor do subtotal, que será decrementado pelo item que será deletado.
+            //Essa ação pega o valor que está sendo digitado dentro da coluna 4 no DataGrid
+            decimal subProduto = decimal.Parse(dataGridViewTabelaProdutos_vendas.CurrentRow.Cells[4].Value.ToString());
+
+            //Aqui pega o numero do Indice do produto que será removido
+            int indice = dataGridViewTabelaProdutos_vendas.CurrentRow.Index;
+
+            //Aqui pega a Linha em que está o valor que queremos/selecionamos
+            DataRow linha = carrinho.Rows[indice];
+
+            carrinho.Rows.Remove(linha);//Remove a linha 
+            carrinho.AcceptChanges();//Ação para que as alterações sejam realizadas, é uma especie de play
+
+            total -= subProduto;//pega o valor da tabela de carrinhos e diminui 
+            textBoxValorTotal.Text = total.ToString();//Isso vai atualizar o textBox que mostra o valor da compra
+
+            MessageBox.Show("Item Removido do Carrinho com sucesso!");
+
+
+
+        }
+
         private void FrmVendas_Load(object sender, EventArgs e)
         {
             //Aqui será preparado os dados para ser apresentado no dataGriDView
