@@ -59,7 +59,6 @@ namespace ProjetoCv.br.com.projeto.view
 
                 tbNomeClienteVendas.Text = objCliente.Nome;//Isso ira mostrar o nome do cliente na tela 
             }
-            
 
         }
 
@@ -81,23 +80,33 @@ namespace ProjetoCv.br.com.projeto.view
 
         private void btnAdicionarItem_Vendas_Click(object sender, EventArgs e)
         {
-            //Evento responssavel por fazer a contablidade do carrinho e mostrar no DataViewGrid com a relação dos Itens
-            qtd = int.Parse(tbQtdProduto_Vendas.Text);
-            preco = decimal.Parse(tbPrecoProduto_vendas.Text);
+            try
+            {
+                //Evento responssavel por fazer a contablidade do carrinho e mostrar no DataViewGrid com a relação dos Itens
+                qtd = int.Parse(tbQtdProduto_Vendas.Text);
+                preco = decimal.Parse(tbPrecoProduto_vendas.Text);
 
-            subTotal = qtd * preco;
-            total += subTotal;
+                subTotal = qtd * preco;
+                total += subTotal;
 
-            //Adicionando os itens ao carrinho(tabela) resultados na tabela
-            carrinho.Rows.Add(int.Parse(tbCodigoProduto_vendas.Text), tbDescricaoProduto_Vendas.Text, qtd, preco, subTotal);
-            textBoxValorTotal.Text = total.ToString();
+                //Adicionando os itens ao carrinho(tabela) resultados na tabela
+                carrinho.Rows.Add(int.Parse(tbCodigoProduto_vendas.Text), tbDescricaoProduto_Vendas.Text, qtd, preco, subTotal);
+                textBoxValorTotal.Text = total.ToString();
 
 
-            //Limpando os campos após adicionar os Itens
-            tbCodigoProduto_vendas.Clear();
-            tbDescricaoProduto_Vendas.Clear();
-            tbQtdProduto_Vendas.Clear();
-            tbPrecoProduto_vendas.Clear();
+                //Limpando os campos após adicionar os Itens
+                tbCodigoProduto_vendas.Clear();
+                tbDescricaoProduto_Vendas.Clear();
+                tbQtdProduto_Vendas.Clear();
+                tbPrecoProduto_vendas.Clear();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Não foi possivel adicionar o Item ao carrinho!" +
+                    "Verifique se o codigo foi digitado!");
+            }
+
         }
 
         private void btnRemoverItem_vendas_Click(object sender, EventArgs e)
@@ -120,6 +129,24 @@ namespace ProjetoCv.br.com.projeto.view
             textBoxValorTotal.Text = total.ToString();//Isso vai atualizar o textBox que mostra o valor da compra
 
             MessageBox.Show("Item Removido do Carrinho com sucesso!");
+
+
+
+        }
+
+        private void buttonPagamento_vendas_Click(object sender, EventArgs e)
+        {
+            //Evendo do botão de pagamento na area de vendas
+            //Criado uma instência da Tela de Pagamentos para manipular os dados da mesma
+            FrmPagamentos frmPag = new FrmPagamentos(objCliente, carrinho);//Valores dos parametros instanciados no inicio da classe, vai ser enviado para o banco de dados
+
+            //Passando os valores entre as telas 
+            frmPag.tbPgamento_total.Text = textBoxValorTotal.Text;
+
+
+            //isso cria uma chamada para  nova tela ao clicar no botão
+            frmPag.ShowDialog();
+
 
 
 

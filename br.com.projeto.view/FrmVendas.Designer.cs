@@ -310,6 +310,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.textBoxValorTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxValorTotal.Location = new System.Drawing.Point(235, 35);
             this.textBoxValorTotal.Name = "textBoxValorTotal";
+            this.textBoxValorTotal.ReadOnly = true;
             this.textBoxValorTotal.Size = new System.Drawing.Size(238, 26);
             this.textBoxValorTotal.TabIndex = 19;
             this.textBoxValorTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -345,8 +346,9 @@ namespace ProjetoCv.br.com.projeto.view
             this.buttonPagamento_vendas.Name = "buttonPagamento_vendas";
             this.buttonPagamento_vendas.Size = new System.Drawing.Size(173, 46);
             this.buttonPagamento_vendas.TabIndex = 26;
-            this.buttonPagamento_vendas.Text = "Adicionar Item";
+            this.buttonPagamento_vendas.Text = "Pagar";
             this.buttonPagamento_vendas.UseVisualStyleBackColor = false;
+            this.buttonPagamento_vendas.Click += new System.EventHandler(this.buttonPagamento_vendas_Click);
             // 
             // FrmVendas
             // 
