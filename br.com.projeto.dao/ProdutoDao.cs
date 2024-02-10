@@ -281,6 +281,7 @@ namespace ProjetoCv.br.com.projeto.dao
                 else
                 {
                     MessageBox.Show($"Nenhum Produto encontrado! ");
+                    conexao.Close();
                     return null;// Para retornar vazio
                 }
             }

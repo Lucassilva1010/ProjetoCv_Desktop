@@ -32,29 +32,29 @@ namespace ProjetoCv.br.com.projeto.view
             this.panelProdutos = new System.Windows.Forms.Panel();
             this.labelVendas = new System.Windows.Forms.Label();
             this.groupBoxCliente = new System.Windows.Forms.GroupBox();
-            this.groupBoxProduto = new System.Windows.Forms.GroupBox();
-            this.maskTBCpfClienteVendas = new System.Windows.Forms.MaskedTextBox();
-            this.lbCpf = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tbNomeClienteVendas = new System.Windows.Forms.TextBox();
             this.lbNome = new System.Windows.Forms.Label();
-            this.tbCodigoProduto_vendas = new System.Windows.Forms.TextBox();
-            this.labCodigo = new System.Windows.Forms.Label();
-            this.tbDescricaoProduto_Vendas = new System.Windows.Forms.TextBox();
-            this.lbDescricao = new System.Windows.Forms.Label();
+            this.maskTBCpfClienteVendas = new System.Windows.Forms.MaskedTextBox();
+            this.lbCpf = new System.Windows.Forms.Label();
+            this.groupBoxProduto = new System.Windows.Forms.GroupBox();
+            this.btnRemoverItem_vendas = new System.Windows.Forms.Button();
+            this.btnAdicionarItem_Vendas = new System.Windows.Forms.Button();
+            this.tbQtdProduto_Vendas = new System.Windows.Forms.TextBox();
+            this.lbQtdEstoqueVendas = new System.Windows.Forms.Label();
             this.tbPrecoProduto_vendas = new System.Windows.Forms.TextBox();
             this.lbPreco = new System.Windows.Forms.Label();
-            this.tbQtdEstoqueProduto_Vendas = new System.Windows.Forms.TextBox();
-            this.lbQtdEstoqueVendas = new System.Windows.Forms.Label();
-            this.btnAdicionarItem_Vendas = new System.Windows.Forms.Button();
-            this.btnRemoverItem_vendas = new System.Windows.Forms.Button();
+            this.tbDescricaoProduto_Vendas = new System.Windows.Forms.TextBox();
+            this.lbDescricao = new System.Windows.Forms.Label();
+            this.tbCodigoProduto_vendas = new System.Windows.Forms.TextBox();
+            this.labCodigo = new System.Windows.Forms.Label();
             this.dataGridViewTabelaProdutos_vendas = new System.Windows.Forms.DataGridView();
             this.groupBoxTotalCarrinho = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxValorTotal = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancelar_vendas = new System.Windows.Forms.Button();
             this.buttonPagamento_vendas = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panelProdutos.SuspendLayout();
             this.groupBoxCliente.SuspendLayout();
             this.groupBoxProduto.SuspendLayout();
@@ -70,7 +70,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.panelProdutos.Location = new System.Drawing.Point(0, 0);
             this.panelProdutos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelProdutos.Name = "panelProdutos";
-            this.panelProdutos.Size = new System.Drawing.Size(1210, 121);
+            this.panelProdutos.Size = new System.Drawing.Size(1194, 121);
             this.panelProdutos.TabIndex = 4;
             // 
             // labelVendas
@@ -101,25 +101,43 @@ namespace ProjetoCv.br.com.projeto.view
             this.groupBoxCliente.TabStop = false;
             this.groupBoxCliente.Text = "Cliente";
             // 
-            // groupBoxProduto
+            // textBox2
             // 
-            this.groupBoxProduto.Controls.Add(this.btnRemoverItem_vendas);
-            this.groupBoxProduto.Controls.Add(this.btnAdicionarItem_Vendas);
-            this.groupBoxProduto.Controls.Add(this.tbQtdEstoqueProduto_Vendas);
-            this.groupBoxProduto.Controls.Add(this.lbQtdEstoqueVendas);
-            this.groupBoxProduto.Controls.Add(this.tbPrecoProduto_vendas);
-            this.groupBoxProduto.Controls.Add(this.lbPreco);
-            this.groupBoxProduto.Controls.Add(this.tbDescricaoProduto_Vendas);
-            this.groupBoxProduto.Controls.Add(this.lbDescricao);
-            this.groupBoxProduto.Controls.Add(this.tbCodigoProduto_vendas);
-            this.groupBoxProduto.Controls.Add(this.labCodigo);
-            this.groupBoxProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxProduto.Location = new System.Drawing.Point(12, 317);
-            this.groupBoxProduto.Name = "groupBoxProduto";
-            this.groupBoxProduto.Size = new System.Drawing.Size(483, 280);
-            this.groupBoxProduto.TabIndex = 6;
-            this.groupBoxProduto.TabStop = false;
-            this.groupBoxProduto.Text = "Produto";
+            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Location = new System.Drawing.Point(61, 48);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(308, 26);
+            this.textBox2.TabIndex = 21;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label2.Location = new System.Drawing.Point(58, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(145, 20);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Data da Compra:";
+            // 
+            // tbNomeClienteVendas
+            // 
+            this.tbNomeClienteVendas.BackColor = System.Drawing.SystemColors.Window;
+            this.tbNomeClienteVendas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbNomeClienteVendas.Location = new System.Drawing.Point(80, 130);
+            this.tbNomeClienteVendas.Name = "tbNomeClienteVendas";
+            this.tbNomeClienteVendas.Size = new System.Drawing.Size(308, 26);
+            this.tbNomeClienteVendas.TabIndex = 19;
+            // 
+            // lbNome
+            // 
+            this.lbNome.AutoSize = true;
+            this.lbNome.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbNome.Location = new System.Drawing.Point(17, 133);
+            this.lbNome.Name = "lbNome";
+            this.lbNome.Size = new System.Drawing.Size(60, 20);
+            this.lbNome.TabIndex = 18;
+            this.lbNome.Text = "Nome:";
             // 
             // maskTBCpfClienteVendas
             // 
@@ -141,24 +159,107 @@ namespace ProjetoCv.br.com.projeto.view
             this.lbCpf.TabIndex = 16;
             this.lbCpf.Text = "CPF:";
             // 
-            // tbNomeClienteVendas
+            // groupBoxProduto
             // 
-            this.tbNomeClienteVendas.BackColor = System.Drawing.SystemColors.Window;
-            this.tbNomeClienteVendas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbNomeClienteVendas.Location = new System.Drawing.Point(80, 130);
-            this.tbNomeClienteVendas.Name = "tbNomeClienteVendas";
-            this.tbNomeClienteVendas.Size = new System.Drawing.Size(308, 26);
-            this.tbNomeClienteVendas.TabIndex = 19;
+            this.groupBoxProduto.Controls.Add(this.btnRemoverItem_vendas);
+            this.groupBoxProduto.Controls.Add(this.btnAdicionarItem_Vendas);
+            this.groupBoxProduto.Controls.Add(this.tbQtdProduto_Vendas);
+            this.groupBoxProduto.Controls.Add(this.lbQtdEstoqueVendas);
+            this.groupBoxProduto.Controls.Add(this.tbPrecoProduto_vendas);
+            this.groupBoxProduto.Controls.Add(this.lbPreco);
+            this.groupBoxProduto.Controls.Add(this.tbDescricaoProduto_Vendas);
+            this.groupBoxProduto.Controls.Add(this.lbDescricao);
+            this.groupBoxProduto.Controls.Add(this.tbCodigoProduto_vendas);
+            this.groupBoxProduto.Controls.Add(this.labCodigo);
+            this.groupBoxProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxProduto.Location = new System.Drawing.Point(12, 317);
+            this.groupBoxProduto.Name = "groupBoxProduto";
+            this.groupBoxProduto.Size = new System.Drawing.Size(483, 280);
+            this.groupBoxProduto.TabIndex = 6;
+            this.groupBoxProduto.TabStop = false;
+            this.groupBoxProduto.Text = "Produto";
             // 
-            // lbNome
+            // btnRemoverItem_vendas
             // 
-            this.lbNome.AutoSize = true;
-            this.lbNome.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbNome.Location = new System.Drawing.Point(17, 133);
-            this.lbNome.Name = "lbNome";
-            this.lbNome.Size = new System.Drawing.Size(60, 20);
-            this.lbNome.TabIndex = 18;
-            this.lbNome.Text = "Nome:";
+            this.btnRemoverItem_vendas.BackColor = System.Drawing.Color.Red;
+            this.btnRemoverItem_vendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoverItem_vendas.ForeColor = System.Drawing.Color.White;
+            this.btnRemoverItem_vendas.Location = new System.Drawing.Point(258, 182);
+            this.btnRemoverItem_vendas.Name = "btnRemoverItem_vendas";
+            this.btnRemoverItem_vendas.Size = new System.Drawing.Size(153, 61);
+            this.btnRemoverItem_vendas.TabIndex = 25;
+            this.btnRemoverItem_vendas.Text = "Remover Item";
+            this.btnRemoverItem_vendas.UseVisualStyleBackColor = false;
+            // 
+            // btnAdicionarItem_Vendas
+            // 
+            this.btnAdicionarItem_Vendas.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnAdicionarItem_Vendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarItem_Vendas.ForeColor = System.Drawing.Color.White;
+            this.btnAdicionarItem_Vendas.Location = new System.Drawing.Point(23, 182);
+            this.btnAdicionarItem_Vendas.Name = "btnAdicionarItem_Vendas";
+            this.btnAdicionarItem_Vendas.Size = new System.Drawing.Size(173, 61);
+            this.btnAdicionarItem_Vendas.TabIndex = 24;
+            this.btnAdicionarItem_Vendas.Text = "Adicionar Item";
+            this.btnAdicionarItem_Vendas.UseVisualStyleBackColor = false;
+            this.btnAdicionarItem_Vendas.Click += new System.EventHandler(this.btnAdicionarItem_Vendas_Click);
+            // 
+            // tbQtdProduto_Vendas
+            // 
+            this.tbQtdProduto_Vendas.BackColor = System.Drawing.SystemColors.Window;
+            this.tbQtdProduto_Vendas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbQtdProduto_Vendas.Location = new System.Drawing.Point(344, 132);
+            this.tbQtdProduto_Vendas.Name = "tbQtdProduto_Vendas";
+            this.tbQtdProduto_Vendas.Size = new System.Drawing.Size(83, 26);
+            this.tbQtdProduto_Vendas.TabIndex = 23;
+            // 
+            // lbQtdEstoqueVendas
+            // 
+            this.lbQtdEstoqueVendas.AutoSize = true;
+            this.lbQtdEstoqueVendas.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbQtdEstoqueVendas.Location = new System.Drawing.Point(290, 133);
+            this.lbQtdEstoqueVendas.Name = "lbQtdEstoqueVendas";
+            this.lbQtdEstoqueVendas.Size = new System.Drawing.Size(48, 20);
+            this.lbQtdEstoqueVendas.TabIndex = 22;
+            this.lbQtdEstoqueVendas.Text = "Qtd.:";
+            // 
+            // tbPrecoProduto_vendas
+            // 
+            this.tbPrecoProduto_vendas.BackColor = System.Drawing.SystemColors.Window;
+            this.tbPrecoProduto_vendas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbPrecoProduto_vendas.Location = new System.Drawing.Point(124, 130);
+            this.tbPrecoProduto_vendas.Name = "tbPrecoProduto_vendas";
+            this.tbPrecoProduto_vendas.Size = new System.Drawing.Size(120, 26);
+            this.tbPrecoProduto_vendas.TabIndex = 11;
+            // 
+            // lbPreco
+            // 
+            this.lbPreco.AutoSize = true;
+            this.lbPreco.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbPreco.Location = new System.Drawing.Point(25, 132);
+            this.lbPreco.Name = "lbPreco";
+            this.lbPreco.Size = new System.Drawing.Size(100, 20);
+            this.lbPreco.TabIndex = 10;
+            this.lbPreco.Text = "Preço (R$):";
+            // 
+            // tbDescricaoProduto_Vendas
+            // 
+            this.tbDescricaoProduto_Vendas.BackColor = System.Drawing.SystemColors.Window;
+            this.tbDescricaoProduto_Vendas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbDescricaoProduto_Vendas.Location = new System.Drawing.Point(110, 81);
+            this.tbDescricaoProduto_Vendas.Name = "tbDescricaoProduto_Vendas";
+            this.tbDescricaoProduto_Vendas.Size = new System.Drawing.Size(333, 26);
+            this.tbDescricaoProduto_Vendas.TabIndex = 5;
+            // 
+            // lbDescricao
+            // 
+            this.lbDescricao.AutoSize = true;
+            this.lbDescricao.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbDescricao.Location = new System.Drawing.Point(19, 81);
+            this.lbDescricao.Name = "lbDescricao";
+            this.lbDescricao.Size = new System.Drawing.Size(94, 20);
+            this.lbDescricao.TabIndex = 4;
+            this.lbDescricao.Text = "Descrição:";
             // 
             // tbCodigoProduto_vendas
             // 
@@ -180,98 +281,20 @@ namespace ProjetoCv.br.com.projeto.view
             this.labCodigo.TabIndex = 2;
             this.labCodigo.Text = "Código:";
             // 
-            // tbDescricaoProduto_Vendas
-            // 
-            this.tbDescricaoProduto_Vendas.BackColor = System.Drawing.SystemColors.Window;
-            this.tbDescricaoProduto_Vendas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbDescricaoProduto_Vendas.Location = new System.Drawing.Point(110, 81);
-            this.tbDescricaoProduto_Vendas.Name = "tbDescricaoProduto_Vendas";
-            this.tbDescricaoProduto_Vendas.Size = new System.Drawing.Size(333, 26);
-            this.tbDescricaoProduto_Vendas.TabIndex = 5;
-            // 
-            // lbDescricao
-            // 
-            this.lbDescricao.AutoSize = true;
-            this.lbDescricao.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbDescricao.Location = new System.Drawing.Point(19, 81);
-            this.lbDescricao.Name = "lbDescricao";
-            this.lbDescricao.Size = new System.Drawing.Size(94, 20);
-            this.lbDescricao.TabIndex = 4;
-            this.lbDescricao.Text = "Descrição:";
-            // 
-            // tbPrecoProduto_vendas
-            // 
-            this.tbPrecoProduto_vendas.BackColor = System.Drawing.SystemColors.Window;
-            this.tbPrecoProduto_vendas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbPrecoProduto_vendas.Location = new System.Drawing.Point(124, 130);
-            this.tbPrecoProduto_vendas.Name = "tbPrecoProduto_vendas";
-            this.tbPrecoProduto_vendas.Size = new System.Drawing.Size(120, 26);
-            this.tbPrecoProduto_vendas.TabIndex = 11;
-            // 
-            // lbPreco
-            // 
-            this.lbPreco.AutoSize = true;
-            this.lbPreco.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbPreco.Location = new System.Drawing.Point(25, 132);
-            this.lbPreco.Name = "lbPreco";
-            this.lbPreco.Size = new System.Drawing.Size(100, 20);
-            this.lbPreco.TabIndex = 10;
-            this.lbPreco.Text = "Preço (R$):";
-            // 
-            // tbQtdEstoqueProduto_Vendas
-            // 
-            this.tbQtdEstoqueProduto_Vendas.BackColor = System.Drawing.SystemColors.Window;
-            this.tbQtdEstoqueProduto_Vendas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbQtdEstoqueProduto_Vendas.Location = new System.Drawing.Point(381, 131);
-            this.tbQtdEstoqueProduto_Vendas.Name = "tbQtdEstoqueProduto_Vendas";
-            this.tbQtdEstoqueProduto_Vendas.Size = new System.Drawing.Size(83, 26);
-            this.tbQtdEstoqueProduto_Vendas.TabIndex = 23;
-            // 
-            // lbQtdEstoqueVendas
-            // 
-            this.lbQtdEstoqueVendas.AutoSize = true;
-            this.lbQtdEstoqueVendas.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbQtdEstoqueVendas.Location = new System.Drawing.Point(263, 133);
-            this.lbQtdEstoqueVendas.Name = "lbQtdEstoqueVendas";
-            this.lbQtdEstoqueVendas.Size = new System.Drawing.Size(120, 20);
-            this.lbQtdEstoqueVendas.TabIndex = 22;
-            this.lbQtdEstoqueVendas.Text = "Qtd. Estoque:";
-            // 
-            // btnAdicionarItem_Vendas
-            // 
-            this.btnAdicionarItem_Vendas.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnAdicionarItem_Vendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarItem_Vendas.ForeColor = System.Drawing.Color.White;
-            this.btnAdicionarItem_Vendas.Location = new System.Drawing.Point(23, 182);
-            this.btnAdicionarItem_Vendas.Name = "btnAdicionarItem_Vendas";
-            this.btnAdicionarItem_Vendas.Size = new System.Drawing.Size(173, 61);
-            this.btnAdicionarItem_Vendas.TabIndex = 24;
-            this.btnAdicionarItem_Vendas.Text = "Adicionar Item";
-            this.btnAdicionarItem_Vendas.UseVisualStyleBackColor = false;
-            // 
-            // btnRemoverItem_vendas
-            // 
-            this.btnRemoverItem_vendas.BackColor = System.Drawing.Color.Red;
-            this.btnRemoverItem_vendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoverItem_vendas.ForeColor = System.Drawing.Color.White;
-            this.btnRemoverItem_vendas.Location = new System.Drawing.Point(258, 182);
-            this.btnRemoverItem_vendas.Name = "btnRemoverItem_vendas";
-            this.btnRemoverItem_vendas.Size = new System.Drawing.Size(153, 61);
-            this.btnRemoverItem_vendas.TabIndex = 25;
-            this.btnRemoverItem_vendas.Text = "Remover Item";
-            this.btnRemoverItem_vendas.UseVisualStyleBackColor = false;
-            // 
             // dataGridViewTabelaProdutos_vendas
             // 
+            this.dataGridViewTabelaProdutos_vendas.AllowUserToAddRows = false;
+            this.dataGridViewTabelaProdutos_vendas.AllowUserToDeleteRows = false;
             this.dataGridViewTabelaProdutos_vendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTabelaProdutos_vendas.Location = new System.Drawing.Point(517, 138);
             this.dataGridViewTabelaProdutos_vendas.Name = "dataGridViewTabelaProdutos_vendas";
+            this.dataGridViewTabelaProdutos_vendas.ReadOnly = true;
             this.dataGridViewTabelaProdutos_vendas.Size = new System.Drawing.Size(669, 365);
             this.dataGridViewTabelaProdutos_vendas.TabIndex = 7;
             // 
             // groupBoxTotalCarrinho
             // 
-            this.groupBoxTotalCarrinho.Controls.Add(this.textBox1);
+            this.groupBoxTotalCarrinho.Controls.Add(this.textBoxValorTotal);
             this.groupBoxTotalCarrinho.Controls.Add(this.label1);
             this.groupBoxTotalCarrinho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxTotalCarrinho.Location = new System.Drawing.Point(517, 509);
@@ -280,14 +303,15 @@ namespace ProjetoCv.br.com.projeto.view
             this.groupBoxTotalCarrinho.TabIndex = 20;
             this.groupBoxTotalCarrinho.TabStop = false;
             // 
-            // textBox1
+            // textBoxValorTotal
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(235, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(308, 26);
-            this.textBox1.TabIndex = 19;
+            this.textBoxValorTotal.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxValorTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxValorTotal.Location = new System.Drawing.Point(235, 35);
+            this.textBoxValorTotal.Name = "textBoxValorTotal";
+            this.textBoxValorTotal.Size = new System.Drawing.Size(238, 26);
+            this.textBoxValorTotal.TabIndex = 19;
+            this.textBoxValorTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -295,9 +319,9 @@ namespace ProjetoCv.br.com.projeto.view
             this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label1.Location = new System.Drawing.Point(82, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 20);
+            this.label1.Size = new System.Drawing.Size(141, 20);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Valor total (R$):";
+            this.label1.Text = "Valor Total (R$):";
             // 
             // btnCancelar_vendas
             // 
@@ -323,30 +347,11 @@ namespace ProjetoCv.br.com.projeto.view
             this.buttonPagamento_vendas.Text = "Adicionar Item";
             this.buttonPagamento_vendas.UseVisualStyleBackColor = false;
             // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(61, 48);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(308, 26);
-            this.textBox2.TabIndex = 21;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(58, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 20);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Data da Compra:";
-            // 
             // FrmVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1210, 692);
+            this.ClientSize = new System.Drawing.Size(1194, 692);
             this.Controls.Add(this.btnCancelar_vendas);
             this.Controls.Add(this.buttonPagamento_vendas);
             this.Controls.Add(this.groupBoxTotalCarrinho);
@@ -358,6 +363,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmVendas";
             this.Text = "FrmVendas";
+            this.Load += new System.EventHandler(this.FrmVendas_Load);
             this.panelProdutos.ResumeLayout(false);
             this.panelProdutos.PerformLayout();
             this.groupBoxCliente.ResumeLayout(false);
@@ -387,13 +393,13 @@ namespace ProjetoCv.br.com.projeto.view
         private System.Windows.Forms.Label lbDescricao;
         private System.Windows.Forms.TextBox tbPrecoProduto_vendas;
         private System.Windows.Forms.Label lbPreco;
-        private System.Windows.Forms.TextBox tbQtdEstoqueProduto_Vendas;
+        private System.Windows.Forms.TextBox tbQtdProduto_Vendas;
         private System.Windows.Forms.Label lbQtdEstoqueVendas;
         private System.Windows.Forms.Button btnRemoverItem_vendas;
         private System.Windows.Forms.Button btnAdicionarItem_Vendas;
         private System.Windows.Forms.DataGridView dataGridViewTabelaProdutos_vendas;
         private System.Windows.Forms.GroupBox groupBoxTotalCarrinho;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxValorTotal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancelar_vendas;
         private System.Windows.Forms.Button buttonPagamento_vendas;

@@ -303,6 +303,7 @@ namespace ProjetoCv.br.com.projeto.dao
             {
                 MessageBox.Show($"Erro ao Mostrar o Cliente. " +
                     $"Erro: {erro}");
+                conexao.Close();
                 return null;// Para retornar vazio
             }
         }

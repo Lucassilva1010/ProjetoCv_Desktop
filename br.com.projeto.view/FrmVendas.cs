@@ -22,9 +22,28 @@ namespace ProjetoCv.br.com.projeto.view
         Produto objProduto = new Produto();
         ProdutoDao objProDao = new ProdutoDao();
 
+        //Variaveis
+        int qtd;
+        decimal preco;
+        decimal subTotal, total;
+
+        //Carrinho
+        //Aqui será o objeto que vai preencher todos os campos no dataGrid
+        DataTable carrinho = new DataTable();
+
         public FrmVendas()
         {
             InitializeComponent();
+
+            //Montando a saida das informações na tela do DataGridView
+            carrinho.Columns.Add("Código", typeof(int));
+            carrinho.Columns.Add("Produto", typeof(string));
+            carrinho.Columns.Add("QTD", typeof(int));
+            carrinho.Columns.Add("Preço", typeof(decimal));
+            carrinho.Columns.Add("Subtotal", typeof(decimal));
+
+            //Passando as informações para tela
+            dataGridViewTabelaProdutos_vendas.DataSource = carrinho;
         }
 
         private void maskedTBCpfClienteVendas_KeyPress(object sender, KeyPressEventArgs e)
@@ -40,8 +59,10 @@ namespace ProjetoCv.br.com.projeto.view
 
                 tbNomeClienteVendas.Text = objCliente.Nome;//Isso ira mostrar o nome do cliente na tela 
             }
+            
 
         }
+
 
         private void tbCodigoProduto_vendas_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -56,6 +77,33 @@ namespace ProjetoCv.br.com.projeto.view
                 tbDescricaoProduto_Vendas.Text = objProduto.Descricao;//Isso ira mostrar o nome do cliente na tela 
                 tbPrecoProduto_vendas.Text = objProduto.Preco.ToString();//Isso ira mostrar o nome do cliente na tela 
             }
+        }
+
+        private void btnAdicionarItem_Vendas_Click(object sender, EventArgs e)
+        {
+            //Evento responssavel por fazer a contablidade do carrinho e mostrar no DataViewGrid com a relação dos Itens
+            qtd = int.Parse(tbQtdProduto_Vendas.Text);
+            preco = decimal.Parse(tbPrecoProduto_vendas.Text);
+
+            subTotal = qtd * preco;
+            total += subTotal;
+
+            //Adicionando os itens ao carrinho(tabela) resultados na tabela
+            carrinho.Rows.Add(int.Parse(tbCodigoProduto_vendas.Text), tbDescricaoProduto_Vendas.Text, qtd, preco, subTotal);
+            textBoxValorTotal.Text = total.ToString();
+
+
+            //Limpando os campos após adicionar os Itens
+            tbCodigoProduto_vendas.Clear();
+            tbDescricaoProduto_Vendas.Clear();
+            tbQtdProduto_Vendas.Clear();
+            tbPrecoProduto_vendas.Clear();
+        }
+
+        private void FrmVendas_Load(object sender, EventArgs e)
+        {
+            //Aqui será preparado os dados para ser apresentado no dataGriDView
+            //POderia ser criado no construtor dessa classe, pois ele é responssavel por inicializar os dados dessa classe, "como foi feito"
         }
     }
 }
