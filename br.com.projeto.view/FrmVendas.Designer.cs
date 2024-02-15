@@ -32,8 +32,8 @@ namespace ProjetoCv.br.com.projeto.view
             this.panelProdutos = new System.Windows.Forms.Panel();
             this.labelVendas = new System.Windows.Forms.Label();
             this.groupBoxCliente = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxDataCompra = new System.Windows.Forms.TextBox();
+            this.labelDataCompra = new System.Windows.Forms.Label();
             this.tbNomeClienteVendas = new System.Windows.Forms.TextBox();
             this.lbNome = new System.Windows.Forms.Label();
             this.maskTBCpfClienteVendas = new System.Windows.Forms.MaskedTextBox();
@@ -87,8 +87,8 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             // groupBoxCliente
             // 
-            this.groupBoxCliente.Controls.Add(this.textBox2);
-            this.groupBoxCliente.Controls.Add(this.label2);
+            this.groupBoxCliente.Controls.Add(this.textBoxDataCompra);
+            this.groupBoxCliente.Controls.Add(this.labelDataCompra);
             this.groupBoxCliente.Controls.Add(this.tbNomeClienteVendas);
             this.groupBoxCliente.Controls.Add(this.lbNome);
             this.groupBoxCliente.Controls.Add(this.maskTBCpfClienteVendas);
@@ -101,24 +101,25 @@ namespace ProjetoCv.br.com.projeto.view
             this.groupBoxCliente.TabStop = false;
             this.groupBoxCliente.Text = "Cliente";
             // 
-            // textBox2
+            // textBoxDataCompra
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(61, 48);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(308, 26);
-            this.textBox2.TabIndex = 21;
+            this.textBoxDataCompra.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxDataCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxDataCompra.Location = new System.Drawing.Point(61, 48);
+            this.textBoxDataCompra.Name = "textBoxDataCompra";
+            this.textBoxDataCompra.Size = new System.Drawing.Size(142, 26);
+            this.textBoxDataCompra.TabIndex = 21;
+            this.textBoxDataCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label2
+            // labelDataCompra
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(58, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 20);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Data da Compra:";
+            this.labelDataCompra.AutoSize = true;
+            this.labelDataCompra.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelDataCompra.Location = new System.Drawing.Point(58, 25);
+            this.labelDataCompra.Name = "labelDataCompra";
+            this.labelDataCompra.Size = new System.Drawing.Size(145, 20);
+            this.labelDataCompra.TabIndex = 20;
+            this.labelDataCompra.Text = "Data da Compra:";
             // 
             // tbNomeClienteVendas
             // 
@@ -178,6 +179,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.groupBoxProduto.TabIndex = 6;
             this.groupBoxProduto.TabStop = false;
             this.groupBoxProduto.Text = "Produto";
+            this.groupBoxProduto.Enter += new System.EventHandler(this.groupBoxProduto_Enter);
             // 
             // btnRemoverItem_vendas
             // 
@@ -334,7 +336,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnCancelar_vendas.Name = "btnCancelar_vendas";
             this.btnCancelar_vendas.Size = new System.Drawing.Size(153, 46);
             this.btnCancelar_vendas.TabIndex = 27;
-            this.btnCancelar_vendas.Text = "Remover Item";
+            this.btnCancelar_vendas.Text = "Cancelar";
             this.btnCancelar_vendas.UseVisualStyleBackColor = false;
             // 
             // buttonPagamento_vendas
@@ -406,7 +408,7 @@ namespace ProjetoCv.br.com.projeto.view
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancelar_vendas;
         private System.Windows.Forms.Button buttonPagamento_vendas;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxDataCompra;
+        private System.Windows.Forms.Label labelDataCompra;
     }
 }

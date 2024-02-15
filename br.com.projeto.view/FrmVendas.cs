@@ -56,8 +56,17 @@ namespace ProjetoCv.br.com.projeto.view
             if (e.KeyChar == 13)
             {
                 objCliente = objClienteDao.RetornaClientePorCPF(maskTBCpfClienteVendas.Text);//pega o cpf da tela e manda para o metodo
+                if (objCliente != null)
+                {
+                    tbNomeClienteVendas.Text = objCliente.Nome;//Isso ira mostrar o nome do cliente na tela 
 
-                tbNomeClienteVendas.Text = objCliente.Nome;//Isso ira mostrar o nome do cliente na tela 
+                }
+                else
+                {
+                    maskTBCpfClienteVendas.Clear();
+                    maskTBCpfClienteVendas.Focus();
+                }
+
             }
 
         }
@@ -73,8 +82,18 @@ namespace ProjetoCv.br.com.projeto.view
             {
                 objProduto = objProDao.RetornaProdutosPorCodigo(int.Parse(tbCodigoProduto_vendas.Text));//pega o cpf da tela e manda para o metodo
 
-                tbDescricaoProduto_Vendas.Text = objProduto.Descricao;//Isso ira mostrar o nome do cliente na tela 
-                tbPrecoProduto_vendas.Text = objProduto.Preco.ToString();//Isso ira mostrar o nome do cliente na tela 
+                if (objProduto != null)
+                {
+
+                    tbDescricaoProduto_Vendas.Text = objProduto.Descricao;//Isso ira mostrar o nome do cliente na tela 
+                    tbPrecoProduto_vendas.Text = objProduto.Preco.ToString();//Isso ira mostrar o nome do cliente na tela 
+                }
+                else
+                {
+                    tbCodigoProduto_vendas.Clear();
+                    tbCodigoProduto_vendas.Focus();
+
+                }
             }
         }
 
@@ -129,16 +148,14 @@ namespace ProjetoCv.br.com.projeto.view
             textBoxValorTotal.Text = total.ToString();//Isso vai atualizar o textBox que mostra o valor da compra
 
             MessageBox.Show("Item Removido do Carrinho com sucesso!");
-
-
-
         }
 
         private void buttonPagamento_vendas_Click(object sender, EventArgs e)
         {
             //Evendo do botão de pagamento na area de vendas
             //Criado uma instência da Tela de Pagamentos para manipular os dados da mesma
-            FrmPagamentos frmPag = new FrmPagamentos(objCliente, carrinho);//Valores dos parametros instanciados no inicio da classe, vai ser enviado para o banco de dados
+            DateTime dataAtual = DateTime.Parse(textBoxDataCompra.Text);
+            FrmPagamentos frmPag = new FrmPagamentos(objCliente, carrinho, dataAtual);//Valores dos parametros instanciados no inicio da classe, vai ser enviado para o banco de dados
 
             //Passando os valores entre as telas 
             frmPag.tbPgamento_total.Text = textBoxValorTotal.Text;
@@ -146,9 +163,10 @@ namespace ProjetoCv.br.com.projeto.view
 
             //isso cria uma chamada para  nova tela ao clicar no botão
             frmPag.ShowDialog();
+        }
 
-
-
+        private void groupBoxProduto_Enter(object sender, EventArgs e)
+        {
 
         }
 
@@ -156,6 +174,8 @@ namespace ProjetoCv.br.com.projeto.view
         {
             //Aqui será preparado os dados para ser apresentado no dataGriDView
             //POderia ser criado no construtor dessa classe, pois ele é responssavel por inicializar os dados dessa classe, "como foi feito"
+
+            textBoxDataCompra.Text = DateTime.Now.ToShortDateString();
         }
     }
 }

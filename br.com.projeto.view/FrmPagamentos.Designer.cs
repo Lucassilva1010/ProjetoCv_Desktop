@@ -42,6 +42,8 @@ namespace ProjetoCv.br.com.projeto.view
             this.tbPgamento_total = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnCancelar_vendas = new System.Windows.Forms.Button();
+            this.labelObs = new System.Windows.Forms.Label();
+            this.textBoxObs = new System.Windows.Forms.TextBox();
             this.panelProdutos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -175,18 +177,40 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnCancelar_vendas.BackColor = System.Drawing.Color.ForestGreen;
             this.btnCancelar_vendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar_vendas.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar_vendas.Location = new System.Drawing.Point(70, 446);
+            this.btnCancelar_vendas.Location = new System.Drawing.Point(100, 597);
             this.btnCancelar_vendas.Name = "btnCancelar_vendas";
-            this.btnCancelar_vendas.Size = new System.Drawing.Size(309, 46);
+            this.btnCancelar_vendas.Size = new System.Drawing.Size(255, 46);
             this.btnCancelar_vendas.TabIndex = 28;
             this.btnCancelar_vendas.Text = "Finalizar Venda";
             this.btnCancelar_vendas.UseVisualStyleBackColor = false;
+            this.btnCancelar_vendas.Click += new System.EventHandler(this.btnCancelar_vendas_Click);
+            // 
+            // labelObs
+            // 
+            this.labelObs.AutoSize = true;
+            this.labelObs.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelObs.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelObs.Location = new System.Drawing.Point(30, 425);
+            this.labelObs.Name = "labelObs";
+            this.labelObs.Size = new System.Drawing.Size(183, 31);
+            this.labelObs.TabIndex = 29;
+            this.labelObs.Text = "Observações:";
+            // 
+            // textBoxObs
+            // 
+            this.textBoxObs.Location = new System.Drawing.Point(83, 468);
+            this.textBoxObs.Multiline = true;
+            this.textBoxObs.Name = "textBoxObs";
+            this.textBoxObs.Size = new System.Drawing.Size(284, 93);
+            this.textBoxObs.TabIndex = 30;
             // 
             // FrmPagamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 538);
+            this.ClientSize = new System.Drawing.Size(465, 670);
+            this.Controls.Add(this.textBoxObs);
+            this.Controls.Add(this.labelObs);
             this.Controls.Add(this.btnCancelar_vendas);
             this.Controls.Add(this.tbPgamento_total);
             this.Controls.Add(this.label4);
@@ -226,5 +250,7 @@ namespace ProjetoCv.br.com.projeto.view
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCancelar_vendas;
         public System.Windows.Forms.TextBox tbPgamento_total;
+        private System.Windows.Forms.Label labelObs;
+        private System.Windows.Forms.TextBox textBoxObs;
     }
 }
