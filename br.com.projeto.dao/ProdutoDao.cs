@@ -294,5 +294,77 @@ namespace ProjetoCv.br.com.projeto.dao
             }
         }
         #endregion
+
+        #region Baixa de Estoque
+
+        public void BaixaDeEstoque(int idProduto, int qtdEstoque)
+        {
+            try
+            {
+                //Passo 1 - Comando Sql para inserir os dados no Banco
+                string sql = @"Update tb_produtos
+                                set qtd_estoque=@qtd_estoque
+                                    Where id=@id";//Esse parametro é para receber os valores que vem da tela
+
+                //Passo 2 - Organizar o SQL
+                MySqlCommand executaComando = new MySqlCommand(sql, conexao);
+                //Configurar os atributos para receber o quye vem da classe(Objeto) Cliente
+                executaComando.Parameters.AddWithValue("@qtd_estoque", qtdEstoque);
+                executaComando.Parameters.AddWithValue("@id", idProduto);
+
+                //Passo 3 - Abrir e executar a Conexão com o banco de dados
+                conexao.Open();//Abre a conexão
+                executaComando.ExecuteNonQuery();//Inicializa a conexão
+
+                conexao.Close();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show($"Erro ao listar os Produtos. " +
+                    $"Erro: {erro}");
+            }
+        }
+        #endregion
+
+
+        #region Retorna O estoque atual
+
+        public int retornEstoqueAtual(int idProduto)
+        {
+            try
+            {
+
+                int qtdEstoque = 0;
+
+                //1  Criando o DataTable e o comendo Sql
+                //Na pesquisa agora foi usado o LIKE para que ele começe a fazer uma pesquisa simultanea, enquanto digita, ele já vá aparecendo.
+                string sql = @"Select qtd_estoque From bdvendas.tb_produtos Where id = @id";
+
+                //2 Organizando e executando o sql, abrir e executar a Conexão com o banco de dados
+                MySqlCommand executaComando = new MySqlCommand(sql, conexao);
+                executaComando.Parameters.AddWithValue("@id", idProduto);
+
+                conexao.Open();
+
+                MySqlDataReader da = executaComando.ExecuteReader();
+                //Verificação para saber se na coluna existem dados
+                if (da.Read())
+                {
+                    qtdEstoque = da.GetInt32("qtd_estoque");
+                    conexao.Close();
+                }
+                return qtdEstoque;
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show($"Erro ao listar os Produtos. " +
+                    $"Erro: {erro}");
+                return 0;
+                conexao.Close();
+            }
+        }
+        #endregion
+
     }
 }

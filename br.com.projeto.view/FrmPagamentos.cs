@@ -39,6 +39,11 @@ namespace ProjetoCv.br.com.projeto.view
             //Botão de finalizar venda
             try
             {
+
+                ProdutoDao produtoDao = new ProdutoDao();
+
+                int qtd_estoque, qtd_comprada, estoqueAtualizado;
+
                 decimal v_dinheiro, v_cartao, v_pix, totalPago, total, troco;
                 v_dinheiro = decimal.Parse(tbPrecoPagamento_dinheiro.Text);
                 v_cartao = decimal.Parse(tbPagamento_cartao.Text);
@@ -78,9 +83,18 @@ namespace ProjetoCv.br.com.projeto.view
                         item.Quantidade = int.Parse(linha["QTD"].ToString());//Isso pega o valor que foi definido no formulario de vendas
                         item.SubTotal = decimal.Parse(linha["Subtotal"].ToString());//Isso pega o valor que foi definido no formulario de vendas
 
+                        //Baixa no estoque - Sempre que um novo cliente comprar aquele produto
+                        qtd_estoque = produtoDao.retornEstoqueAtual(item.Produto_Id);//Busca pela quantidade de produtos existentes, a cada momento que é adicionado
+                        qtd_comprada = item.Quantidade;//Isso pega a quantidade de ites que o usuario precisa, e depois dar baixa
+                        estoqueAtualizado = qtd_estoque - qtd_comprada;
+
+                        //Lança as informações para o metodo que atualiza apenas o campo de estoque.
+                        produtoDao.BaixaDeEstoque(item.Produto_Id, estoqueAtualizado);
+
                         //Envia para tabela de Itens 
                         ItenVendaDao itenVendaDao = new ItenVendaDao();
                         itenVendaDao.CadastrarItenvenda(item);
+
                     }
 
                     MessageBox.Show("Venda finalizada com sucesso!");
