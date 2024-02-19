@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoCv.br.com.projeto.dao;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,19 @@ namespace ProjetoCv.br.com.projeto.view
 {
     public partial class FrmDetalhes : Form
     {
-        public FrmDetalhes()
+        int venda_id;
+        public FrmDetalhes( int idVenda)
         {
+            venda_id = idVenda;
             InitializeComponent();
+        }
+
+        private void FrmDetalhes_Load(object sender, EventArgs e)
+        {
+            //Carrega a tela de Detalhes 
+            ItenVendaDao itenVendaDao = new ItenVendaDao();
+            //O id esta vindo da outra tela por meio do construtor
+            dataGridListaDeItens.DataSource = itenVendaDao.ListaItensPorVenda(venda_id);
         }
     }
 }

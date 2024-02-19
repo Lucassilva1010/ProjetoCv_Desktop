@@ -42,8 +42,10 @@ namespace ProjetoCv.br.com.projeto.view
         private void dataGridViewHistorico_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // 1 - Criando uma Intancia da tela de Detalhes
+            //Pegando o id para passar por parametro e listar os Itens
 
-            FrmDetalhes telaDetalhes = new FrmDetalhes();
+            int idVenda = int.Parse(dataGridViewHistorico.CurrentRow.Cells[0].Value.ToString());//Pegando o ID na tela
+            FrmDetalhes telaDetalhes = new FrmDetalhes(idVenda);
 
             //Formatando a data para ela aperecer sem as horas
             DateTime dataVenda =Convert.ToDateTime( dataGridViewHistorico.CurrentRow.Cells[1].Value.ToString());

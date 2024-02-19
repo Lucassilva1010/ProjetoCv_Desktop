@@ -171,6 +171,8 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             this.dataGridListaDeItens.AllowUserToAddRows = false;
             this.dataGridListaDeItens.AllowUserToDeleteRows = false;
+            this.dataGridListaDeItens.AllowUserToOrderColumns = true;
+            this.dataGridListaDeItens.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridListaDeItens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridListaDeItens.Location = new System.Drawing.Point(4, 399);
             this.dataGridListaDeItens.Name = "dataGridListaDeItens";
@@ -190,6 +192,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmDetalhes";
             this.Text = "Detalhes da Venda";
+            this.Load += new System.EventHandler(this.FrmDetalhes_Load);
             this.panelProdutos.ResumeLayout(false);
             this.panelProdutos.PerformLayout();
             this.groupBox1.ResumeLayout(false);
