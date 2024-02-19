@@ -3,6 +3,7 @@ using ProjetoCv.br.com.projeto.conexao;
 using ProjetoCv.br.com.projeto.model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -90,6 +91,48 @@ namespace ProjetoCv.br.com.projeto.dao
                 return 0;
             }
         }
+        #endregion
+
+        #region Historio de Vendas
+        public DataTable ListaVendasPorPeriodo( DateTime dataInicial, DateTime dataFinal)
+        {
+            try
+            {
+                DataTable tabelaHistorico = new DataTable();//Aqui cria a tabela para amostragem dos dados 
+                //comando para selecionar os campos ou todos os elementos da tabela vendas
+                string sql = @"SELECT v.id as 'Codígo', 
+                                      v.data_venda as 'Data da Venda',
+                                      c.nome as 'Cliente ', 
+                                      v.total_venda as 'Total', 
+                                      v.observacoes 'OBS' 
+                                FROM bdvendas.tb_vendas as v join bdvendas.tb_clientes as c on (v.cliente_id = c.id) 
+                                  where v.data_venda between @dataInicio and @dataFinal";
+
+
+                //2 Organizando e executando o sql, abrir e executar a Conexão com o banco de dados
+                MySqlCommand executaComando = new MySqlCommand(sql, conexao);
+
+                //Configurar os atributos para receber o que vem da classe(Objeto) Produtos
+                executaComando.Parameters.AddWithValue("@dataInicio", dataInicial);
+                executaComando.Parameters.AddWithValue("@dataFinal", dataFinal);
+
+                conexao.Open();//Abre a conexão
+                executaComando.ExecuteNonQuery();
+
+                //3 Criar o MysQlAdapter para preencher os dados no DataTable
+                MySqlDataAdapter dados = new MySqlDataAdapter(executaComando);
+
+                dados.Fill(tabelaHistorico);//Preenchendo os dados na nossa tabela no formulario
+
+                return tabelaHistorico;
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao Executar o comando SQL: "+ erro);
+                return null;
+            }
+        } 
         #endregion
     }
 
