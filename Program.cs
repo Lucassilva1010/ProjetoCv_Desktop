@@ -22,7 +22,8 @@ namespace ProjetoCv
             //Application.Run(new FrmFuncionario());
             //Application.Run(new FrmFornecedores());
             //Application.Run(new FrmVendas());
-            Application.Run(new FrmHistoricoVendas());
+            //Application.Run(new FrmHistoricoVendas());
+            Application.Run(new FrmDetalhes());
         }
     }
 }

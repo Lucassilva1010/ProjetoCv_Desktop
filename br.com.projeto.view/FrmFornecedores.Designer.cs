@@ -422,6 +422,7 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             this.dataGridView_TabelaFornecedores.AllowUserToAddRows = false;
             this.dataGridView_TabelaFornecedores.AllowUserToDeleteRows = false;
+            this.dataGridView_TabelaFornecedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_TabelaFornecedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_TabelaFornecedores.Location = new System.Drawing.Point(4, 52);
             this.dataGridView_TabelaFornecedores.Name = "dataGridView_TabelaFornecedores";

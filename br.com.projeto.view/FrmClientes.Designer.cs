@@ -447,6 +447,7 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             this.dataGridView_ConsultaCliente.AllowUserToAddRows = false;
             this.dataGridView_ConsultaCliente.AllowUserToDeleteRows = false;
+            this.dataGridView_ConsultaCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_ConsultaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_ConsultaCliente.Location = new System.Drawing.Point(4, 52);
             this.dataGridView_ConsultaCliente.Name = "dataGridView_ConsultaCliente";

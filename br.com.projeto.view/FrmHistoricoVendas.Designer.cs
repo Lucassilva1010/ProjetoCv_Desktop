@@ -38,11 +38,6 @@ namespace ProjetoCv.br.com.projeto.view
             this.dateTimePicFinal = new System.Windows.Forms.DateTimePicker();
             this.dataGridViewHistorico = new System.Windows.Forms.DataGridView();
             this.btnBuscar_historico = new System.Windows.Forms.Button();
-            this.ColCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColData = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColObs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelProdutos.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHistorico)).BeginInit();
@@ -123,13 +118,10 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             // dataGridViewHistorico
             // 
+            this.dataGridViewHistorico.AllowUserToOrderColumns = true;
+            this.dataGridViewHistorico.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewHistorico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewHistorico.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColCod,
-            this.ColData,
-            this.ColCliente,
-            this.ColTotal,
-            this.ColObs});
+            this.dataGridViewHistorico.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.dataGridViewHistorico.Location = new System.Drawing.Point(6, 228);
             this.dataGridViewHistorico.Name = "dataGridViewHistorico";
             this.dataGridViewHistorico.Size = new System.Drawing.Size(964, 412);
@@ -146,41 +138,13 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnBuscar_historico.TabIndex = 29;
             this.btnBuscar_historico.Text = "Buscar";
             this.btnBuscar_historico.UseVisualStyleBackColor = false;
-            // 
-            // ColCod
-            // 
-            this.ColCod.HeaderText = "Codígo";
-            this.ColCod.Name = "ColCod";
-            // 
-            // ColData
-            // 
-            this.ColData.HeaderText = "Data da Venda";
-            this.ColData.Name = "ColData";
-            this.ColData.Width = 150;
-            // 
-            // ColCliente
-            // 
-            this.ColCliente.HeaderText = "Cliente";
-            this.ColCliente.Name = "ColCliente";
-            this.ColCliente.Width = 220;
-            // 
-            // ColTotal
-            // 
-            this.ColTotal.HeaderText = "Total";
-            this.ColTotal.Name = "ColTotal";
-            this.ColTotal.Width = 150;
-            // 
-            // ColObs
-            // 
-            this.ColObs.HeaderText = "OBS";
-            this.ColObs.Name = "ColObs";
-            this.ColObs.Width = 300;
+            this.btnBuscar_historico.Click += new System.EventHandler(this.btnBuscar_historico_Click);
             // 
             // FrmHistoricoVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 652);
+            this.ClientSize = new System.Drawing.Size(982, 665);
             this.Controls.Add(this.dataGridViewHistorico);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panelProdutos);
@@ -188,6 +152,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmHistoricoVendas";
             this.Text = "Historico de Vendas";
+            this.Load += new System.EventHandler(this.FrmHistoricoVendas_Load);
             this.panelProdutos.ResumeLayout(false);
             this.panelProdutos.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -208,10 +173,5 @@ namespace ProjetoCv.br.com.projeto.view
         private System.Windows.Forms.Label lbDataInicio;
         private System.Windows.Forms.DataGridView dataGridViewHistorico;
         private System.Windows.Forms.Button btnBuscar_historico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColCod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColData;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColObs;
     }
 }

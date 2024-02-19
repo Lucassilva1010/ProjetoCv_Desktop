@@ -519,6 +519,7 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             this.dataGridView_TabelaFuncionario.AllowUserToAddRows = false;
             this.dataGridView_TabelaFuncionario.AllowUserToDeleteRows = false;
+            this.dataGridView_TabelaFuncionario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_TabelaFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_TabelaFuncionario.Location = new System.Drawing.Point(4, 52);
             this.dataGridView_TabelaFuncionario.Name = "dataGridView_TabelaFuncionario";

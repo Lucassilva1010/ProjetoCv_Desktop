@@ -288,6 +288,7 @@ namespace ProjetoCv.br.com.projeto.view
             // 
             this.dataGridViewTabelaProdutos_vendas.AllowUserToAddRows = false;
             this.dataGridViewTabelaProdutos_vendas.AllowUserToDeleteRows = false;
+            this.dataGridViewTabelaProdutos_vendas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTabelaProdutos_vendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTabelaProdutos_vendas.Location = new System.Drawing.Point(517, 138);
             this.dataGridViewTabelaProdutos_vendas.Name = "dataGridViewTabelaProdutos_vendas";
