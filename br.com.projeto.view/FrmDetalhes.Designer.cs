@@ -133,7 +133,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.tbDataVenda.Location = new System.Drawing.Point(87, 98);
             this.tbDataVenda.Name = "tbDataVenda";
             this.tbDataVenda.ReadOnly = true;
-            this.tbDataVenda.Size = new System.Drawing.Size(200, 26);
+            this.tbDataVenda.Size = new System.Drawing.Size(149, 26);
             this.tbDataVenda.TabIndex = 7;
             // 
             // labelDataVenda
@@ -204,14 +204,14 @@ namespace ProjetoCv.br.com.projeto.view
         private System.Windows.Forms.Label labelVendas;
         private System.Windows.Forms.Panel panelProdutos;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox tbDataVenda;
         private System.Windows.Forms.Label labelDataVenda;
-        private System.Windows.Forms.TextBox tbTotalVenda;
         private System.Windows.Forms.Label labelTotalVenda;
-        private System.Windows.Forms.TextBox tbNomeClinte;
         private System.Windows.Forms.Label labNomeCliente;
-        private System.Windows.Forms.TextBox tbObs;
         private System.Windows.Forms.Label labelObs;
         private System.Windows.Forms.DataGridView dataGridListaDeItens;
+        public System.Windows.Forms.TextBox tbDataVenda;
+        public System.Windows.Forms.TextBox tbTotalVenda;
+        public System.Windows.Forms.TextBox tbNomeClinte;
+        public System.Windows.Forms.TextBox tbObs;
     }
 }

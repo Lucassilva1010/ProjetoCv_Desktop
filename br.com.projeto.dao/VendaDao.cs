@@ -93,7 +93,7 @@ namespace ProjetoCv.br.com.projeto.dao
         }
         #endregion
 
-        #region Historio de Vendas
+        #region Historio de Vendas Por periodo
         public DataTable ListaVendasPorPeriodo( DateTime dataInicial, DateTime dataFinal)
         {
             try

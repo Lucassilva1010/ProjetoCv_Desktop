@@ -32,12 +32,12 @@ namespace ProjetoCv.br.com.projeto.view
             this.panelProdutos = new System.Windows.Forms.Panel();
             this.labelVendas = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbDataInicio = new System.Windows.Forms.Label();
-            this.lbDataFinal = new System.Windows.Forms.Label();
-            this.dateTimePicInicio = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicFinal = new System.Windows.Forms.DateTimePicker();
-            this.dataGridViewHistorico = new System.Windows.Forms.DataGridView();
             this.btnBuscar_historico = new System.Windows.Forms.Button();
+            this.dateTimePicFinal = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicInicio = new System.Windows.Forms.DateTimePicker();
+            this.lbDataFinal = new System.Windows.Forms.Label();
+            this.lbDataInicio = new System.Windows.Forms.Label();
+            this.dataGridViewHistorico = new System.Windows.Forms.DataGridView();
             this.panelProdutos.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHistorico)).BeginInit();
@@ -80,53 +80,6 @@ namespace ProjetoCv.br.com.projeto.view
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Consulta";
             // 
-            // lbDataInicio
-            // 
-            this.lbDataInicio.AutoSize = true;
-            this.lbDataInicio.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbDataInicio.Location = new System.Drawing.Point(21, 52);
-            this.lbDataInicio.Name = "lbDataInicio";
-            this.lbDataInicio.Size = new System.Drawing.Size(85, 20);
-            this.lbDataInicio.TabIndex = 4;
-            this.lbDataInicio.Text = "Data Inicio";
-            // 
-            // lbDataFinal
-            // 
-            this.lbDataFinal.AutoSize = true;
-            this.lbDataFinal.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lbDataFinal.Location = new System.Drawing.Point(391, 52);
-            this.lbDataFinal.Name = "lbDataFinal";
-            this.lbDataFinal.Size = new System.Drawing.Size(82, 20);
-            this.lbDataFinal.TabIndex = 5;
-            this.lbDataFinal.Text = "Data Final";
-            // 
-            // dateTimePicInicio
-            // 
-            this.dateTimePicInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicInicio.Location = new System.Drawing.Point(112, 52);
-            this.dateTimePicInicio.Name = "dateTimePicInicio";
-            this.dateTimePicInicio.Size = new System.Drawing.Size(134, 26);
-            this.dateTimePicInicio.TabIndex = 6;
-            // 
-            // dateTimePicFinal
-            // 
-            this.dateTimePicFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicFinal.Location = new System.Drawing.Point(479, 52);
-            this.dateTimePicFinal.Name = "dateTimePicFinal";
-            this.dateTimePicFinal.Size = new System.Drawing.Size(129, 26);
-            this.dateTimePicFinal.TabIndex = 7;
-            // 
-            // dataGridViewHistorico
-            // 
-            this.dataGridViewHistorico.AllowUserToOrderColumns = true;
-            this.dataGridViewHistorico.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewHistorico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewHistorico.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.dataGridViewHistorico.Location = new System.Drawing.Point(6, 228);
-            this.dataGridViewHistorico.Name = "dataGridViewHistorico";
-            this.dataGridViewHistorico.Size = new System.Drawing.Size(964, 412);
-            this.dataGridViewHistorico.TabIndex = 8;
-            // 
             // btnBuscar_historico
             // 
             this.btnBuscar_historico.BackColor = System.Drawing.Color.ForestGreen;
@@ -139,6 +92,54 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnBuscar_historico.Text = "Buscar";
             this.btnBuscar_historico.UseVisualStyleBackColor = false;
             this.btnBuscar_historico.Click += new System.EventHandler(this.btnBuscar_historico_Click);
+            // 
+            // dateTimePicFinal
+            // 
+            this.dateTimePicFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicFinal.Location = new System.Drawing.Point(479, 52);
+            this.dateTimePicFinal.Name = "dateTimePicFinal";
+            this.dateTimePicFinal.Size = new System.Drawing.Size(129, 26);
+            this.dateTimePicFinal.TabIndex = 7;
+            // 
+            // dateTimePicInicio
+            // 
+            this.dateTimePicInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicInicio.Location = new System.Drawing.Point(112, 52);
+            this.dateTimePicInicio.Name = "dateTimePicInicio";
+            this.dateTimePicInicio.Size = new System.Drawing.Size(134, 26);
+            this.dateTimePicInicio.TabIndex = 6;
+            // 
+            // lbDataFinal
+            // 
+            this.lbDataFinal.AutoSize = true;
+            this.lbDataFinal.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbDataFinal.Location = new System.Drawing.Point(391, 52);
+            this.lbDataFinal.Name = "lbDataFinal";
+            this.lbDataFinal.Size = new System.Drawing.Size(82, 20);
+            this.lbDataFinal.TabIndex = 5;
+            this.lbDataFinal.Text = "Data Final";
+            // 
+            // lbDataInicio
+            // 
+            this.lbDataInicio.AutoSize = true;
+            this.lbDataInicio.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lbDataInicio.Location = new System.Drawing.Point(21, 52);
+            this.lbDataInicio.Name = "lbDataInicio";
+            this.lbDataInicio.Size = new System.Drawing.Size(85, 20);
+            this.lbDataInicio.TabIndex = 4;
+            this.lbDataInicio.Text = "Data Inicio";
+            // 
+            // dataGridViewHistorico
+            // 
+            this.dataGridViewHistorico.AllowUserToOrderColumns = true;
+            this.dataGridViewHistorico.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewHistorico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHistorico.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.dataGridViewHistorico.Location = new System.Drawing.Point(6, 228);
+            this.dataGridViewHistorico.Name = "dataGridViewHistorico";
+            this.dataGridViewHistorico.Size = new System.Drawing.Size(964, 412);
+            this.dataGridViewHistorico.TabIndex = 8;
+            this.dataGridViewHistorico.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewHistorico_CellClick);
             // 
             // FrmHistoricoVendas
             // 
