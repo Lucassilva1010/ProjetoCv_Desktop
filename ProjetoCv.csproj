@@ -222,5 +222,26 @@
   <ItemGroup>
     <None Include="Resources\vendas.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Client.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\config1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fornecedores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funcionarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\produtos1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vendas1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoSample_ByTailorBrands.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
