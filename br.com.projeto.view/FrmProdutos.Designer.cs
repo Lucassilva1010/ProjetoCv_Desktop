@@ -351,7 +351,6 @@ namespace ProjetoCv.br.com.projeto.view
 
         private System.Windows.Forms.Label labelProdutos;
         private System.Windows.Forms.Panel panelProdutos;
-        private System.Windows.Forms.TabControl tabProdutos;
         private System.Windows.Forms.TabPage tabPageCadProduto;
         private System.Windows.Forms.ComboBox comboBoxFornecedorFk;
         private System.Windows.Forms.Label label4;
@@ -363,7 +362,6 @@ namespace ProjetoCv.br.com.projeto.view
         private System.Windows.Forms.Label lbDescricao;
         private System.Windows.Forms.TextBox tbCodigo;
         private System.Windows.Forms.Label labCodigo;
-        private System.Windows.Forms.TabPage tabPageFornecedor;
         private System.Windows.Forms.DataGridView dataGridView_TabelaProduto;
         private System.Windows.Forms.Button tbnPesquisar_Consulta;
         private System.Windows.Forms.TextBox textBoxNomeBuscar;
@@ -372,5 +370,7 @@ namespace ProjetoCv.br.com.projeto.view
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnNovo;
+        public System.Windows.Forms.TabControl tabProdutos;
+        public System.Windows.Forms.TabPage tabPageFornecedor;
     }
 }

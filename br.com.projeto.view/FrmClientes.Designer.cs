@@ -572,11 +572,9 @@ namespace ProjetoCv.br.com.projeto.view
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabControl tabClientes;
         private System.Windows.Forms.TabPage tabPageCadClientes;
         private System.Windows.Forms.TextBox tbCodigo;
         private System.Windows.Forms.Label labCodigo;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.MaskedTextBox maskedTBCpf;
         private System.Windows.Forms.MaskedTextBox maskedTbRG;
         private System.Windows.Forms.Label lbCel;
@@ -612,5 +610,7 @@ namespace ProjetoCv.br.com.projeto.view
         private System.Windows.Forms.TextBox textBoxNomeBuscar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnPesquisarCep;
+        public System.Windows.Forms.TabControl tabClientes;
+        public System.Windows.Forms.TabPage tabPage2;
     }
 }

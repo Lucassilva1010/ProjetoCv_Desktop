@@ -93,12 +93,14 @@ namespace ProjetoCv.br.com.projeto.view
             this.cadastroDeClientesToolStripMenuItem.Name = "cadastroDeClientesToolStripMenuItem";
             this.cadastroDeClientesToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.cadastroDeClientesToolStripMenuItem.Text = "Cadastro de Clientes";
+            this.cadastroDeClientesToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeClientesToolStripMenuItem_Click);
             // 
             // consultarClientesToolStripMenuItem
             // 
             this.consultarClientesToolStripMenuItem.Name = "consultarClientesToolStripMenuItem";
             this.consultarClientesToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.consultarClientesToolStripMenuItem.Text = "Consultar Clientes";
+            this.consultarClientesToolStripMenuItem.Click += new System.EventHandler(this.consultarClientesToolStripMenuItem_Click);
             // 
             // menuFuncionario
             // 
@@ -300,7 +302,6 @@ namespace ProjetoCv.br.com.projeto.view
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuCliente;
         private System.Windows.Forms.ToolStripMenuItem cadastroDeClientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuFuncionario;
         private System.Windows.Forms.ToolStripMenuItem cadastroDeFuncionariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarFuncionariosToolStripMenuItem;
@@ -324,5 +325,6 @@ namespace ProjetoCv.br.com.projeto.view
         public System.Windows.Forms.ToolStripStatusLabel toolStripData;
         public System.Windows.Forms.ToolStripStatusLabel toolStripSHora;
         private System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.ToolStripMenuItem consultarClientesToolStripMenuItem;
     }
 }

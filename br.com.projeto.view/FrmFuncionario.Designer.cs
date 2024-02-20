@@ -645,7 +645,6 @@ namespace ProjetoCv.br.com.projeto.view
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TabControl tabFuncionario;
         private System.Windows.Forms.TabPage tabPageCadFuncionario;
         private System.Windows.Forms.Button btnPesquisarCep;
         private System.Windows.Forms.ComboBox comboBoxUf;
@@ -676,7 +675,6 @@ namespace ProjetoCv.br.com.projeto.view
         private System.Windows.Forms.Label lbNome;
         private System.Windows.Forms.TextBox tbCodigo;
         private System.Windows.Forms.Label labCodigo;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dataGridView_TabelaFuncionario;
         private System.Windows.Forms.Button tbnPesquisar_Consulta;
         private System.Windows.Forms.TextBox textBoxNomeBuscar;
@@ -692,5 +690,7 @@ namespace ProjetoCv.br.com.projeto.view
         private System.Windows.Forms.Label lbSenha;
         private System.Windows.Forms.Label lbCargo;
         private System.Windows.Forms.ComboBox cboBoxCargo;
+        public System.Windows.Forms.TabControl tabFuncionario;
+        public System.Windows.Forms.TabPage tabPage2;
     }
 }

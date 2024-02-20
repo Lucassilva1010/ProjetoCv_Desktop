@@ -38,5 +38,17 @@ namespace ProjetoCv.br.com.projeto.view
 
         }
 
+        private void cadastroDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmClientes frmClientes = new FrmClientes();
+            frmClientes.ShowDialog();
+        }
+
+        private void consultarClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmClientes frmClientes = new FrmClientes();
+            frmClientes.tabClientes.SelectedTab = frmClientes.tabPage2;
+            frmClientes.ShowDialog();
+        }
     }
 }
