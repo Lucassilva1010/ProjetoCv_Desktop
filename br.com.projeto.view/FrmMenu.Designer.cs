@@ -117,12 +117,14 @@ namespace ProjetoCv.br.com.projeto.view
             this.cadastroDeFuncionariosToolStripMenuItem.Name = "cadastroDeFuncionariosToolStripMenuItem";
             this.cadastroDeFuncionariosToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.cadastroDeFuncionariosToolStripMenuItem.Text = "Cadastro de Funcionarios";
+            this.cadastroDeFuncionariosToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeFuncionariosToolStripMenuItem_Click);
             // 
             // consultarFuncionariosToolStripMenuItem
             // 
             this.consultarFuncionariosToolStripMenuItem.Name = "consultarFuncionariosToolStripMenuItem";
             this.consultarFuncionariosToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.consultarFuncionariosToolStripMenuItem.Text = "Consultar Funcionarios";
+            this.consultarFuncionariosToolStripMenuItem.Click += new System.EventHandler(this.consultarFuncionariosToolStripMenuItem_Click);
             // 
             // menuFornecedores
             // 
@@ -139,12 +141,14 @@ namespace ProjetoCv.br.com.projeto.view
             this.cadastroDeFornecedoresToolStripMenuItem.Name = "cadastroDeFornecedoresToolStripMenuItem";
             this.cadastroDeFornecedoresToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.cadastroDeFornecedoresToolStripMenuItem.Text = "Cadastro de Fornecedores";
+            this.cadastroDeFornecedoresToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeFornecedoresToolStripMenuItem_Click);
             // 
             // consultrarFuncionariosToolStripMenuItem
             // 
             this.consultrarFuncionariosToolStripMenuItem.Name = "consultrarFuncionariosToolStripMenuItem";
             this.consultrarFuncionariosToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.consultrarFuncionariosToolStripMenuItem.Text = "Consultrar Funcionarios";
+            this.consultrarFuncionariosToolStripMenuItem.Click += new System.EventHandler(this.consultrarFuncionariosToolStripMenuItem_Click);
             // 
             // menuProdutos
             // 
@@ -161,12 +165,14 @@ namespace ProjetoCv.br.com.projeto.view
             this.cadastroDeProdutosToolStripMenuItem.Name = "cadastroDeProdutosToolStripMenuItem";
             this.cadastroDeProdutosToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.cadastroDeProdutosToolStripMenuItem.Text = "Cadastro de Produtos";
+            this.cadastroDeProdutosToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeProdutosToolStripMenuItem_Click);
             // 
             // listarProdutosToolStripMenuItem
             // 
             this.listarProdutosToolStripMenuItem.Name = "listarProdutosToolStripMenuItem";
             this.listarProdutosToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.listarProdutosToolStripMenuItem.Text = "Listar Produtos";
+            this.listarProdutosToolStripMenuItem.Click += new System.EventHandler(this.listarProdutosToolStripMenuItem_Click);
             // 
             // menuVendas
             // 
@@ -183,12 +189,14 @@ namespace ProjetoCv.br.com.projeto.view
             this.novaVendaToolStripMenuItem.Name = "novaVendaToolStripMenuItem";
             this.novaVendaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.novaVendaToolStripMenuItem.Text = "Nova venda";
+            this.novaVendaToolStripMenuItem.Click += new System.EventHandler(this.novaVendaToolStripMenuItem_Click);
             // 
             // históricoDeVendasToolStripMenuItem
             // 
             this.históricoDeVendasToolStripMenuItem.Name = "históricoDeVendasToolStripMenuItem";
             this.históricoDeVendasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.históricoDeVendasToolStripMenuItem.Text = "Histórico de Vendas";
+            this.históricoDeVendasToolStripMenuItem.Click += new System.EventHandler(this.históricoDeVendasToolStripMenuItem_Click);
             // 
             // menuConfig
             // 
@@ -205,12 +213,14 @@ namespace ProjetoCv.br.com.projeto.view
             this.trocarDeUsuarioToolStripMenuItem.Name = "trocarDeUsuarioToolStripMenuItem";
             this.trocarDeUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.trocarDeUsuarioToolStripMenuItem.Text = "Trocar de Usuário";
+            this.trocarDeUsuarioToolStripMenuItem.Click += new System.EventHandler(this.trocarDeUsuarioToolStripMenuItem_Click);
             // 
             // sairDoSistemaToolStripMenuItem
             // 
             this.sairDoSistemaToolStripMenuItem.Name = "sairDoSistemaToolStripMenuItem";
             this.sairDoSistemaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sairDoSistemaToolStripMenuItem.Text = "Sair do Sistema";
+            this.sairDoSistemaToolStripMenuItem.Click += new System.EventHandler(this.sairDoSistemaToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
