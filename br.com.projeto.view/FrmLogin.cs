@@ -29,8 +29,7 @@ namespace ProjetoCv.br.com.projeto.view
 
             if (funcDao.Login(email, senha))
             {
-                FrmMenu telaMenu = new FrmMenu();
-                telaMenu.Show();//abre a nova tela de menu
+               
                 this.Hide();//Isso faz com que o formulario de login seja ocultado aopós ser relaizado o mesmo
             } 
         }

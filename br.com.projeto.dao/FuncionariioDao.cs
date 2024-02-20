@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using ProjetoCv.br.com.projeto.conexao;
 using ProjetoCv.br.com.projeto.model;
+using ProjetoCv.br.com.projeto.view;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -284,17 +285,40 @@ namespace ProjetoCv.br.com.projeto.dao
                 MySqlCommand executaComando = new MySqlCommand(sql, conexao);
                 //Configurar os atributos para receber o quye vem da classe(Objeto) Cliente
 
-                executaComando.Parameters.AddWithValue("@email",email);
+                executaComando.Parameters.AddWithValue("@email", email);
                 executaComando.Parameters.AddWithValue("@senha", senha);
-                
+
                 conexao.Open();
 
-                //Gerando e registrando do dados em uma Biblioteca
+                //Gerando e registrando todos os dados possuidos na tabela, atravéz de uma Biblioteca
                 MySqlDataReader dados = executaComando.ExecuteReader();
                 //Verificação para saber se os dados foram preenchidos
                 if (dados.Read())
                 {
-                    MessageBox.Show("Login realizado com sucesso!");
+                    //Configurando os niveis de acesso
+                    string nivelAcesso = dados.GetString("nivel_acesso");//Isso busca o campo em questão na tabela
+                    string nome = dados.GetString("nome");//Isso busca o campo em questão na tabela
+                  
+
+                    FrmMenu telaMenu = new FrmMenu();
+
+                    //Formantando os Campos do Footer do painel
+                    telaMenu.toolStripSUsuario.Text = nome;
+                 
+
+                    if (nivelAcesso.Equals("Administrador"))
+                    {
+                        //Possui todos os direitos e campos
+                        telaMenu.Show();//abre a nova tela de menu
+
+                    }
+                    else if (nivelAcesso.Equals("Usuário"))
+                    {
+                        telaMenu.Show();//abre a nova tela de menu
+                       // telaMenu.menuProdutos.Enabled = false;//isso Bloqueia a função do menu de cadastro de produtos
+                        telaMenu.menuProdutos.Visible = false;//isso oculta o menu de cadastro de produtos
+                        telaMenu.históricoDeVendasToolStripMenuItem.Visible = false; // Isso oculta o submenu do historico de vendas
+                    }
                     return true;
                 }
                 else
@@ -305,7 +329,7 @@ namespace ProjetoCv.br.com.projeto.dao
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Erro ao logar: "+erro);
+                MessageBox.Show("Erro ao logar: " + erro);
                 return false;
             }
         }
