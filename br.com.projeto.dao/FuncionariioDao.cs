@@ -270,5 +270,45 @@ namespace ProjetoCv.br.com.projeto.dao
         #endregion
 
         //Buscar Cliente por ID ou qualquer outro modo que deseje
+
+        #region Metodo do Login
+        public bool Login(string email, string senha)
+        {
+            try
+            {
+                //Passo 1 - Comando Sql para inserir os dados no Banco
+                string sql = @"SELECT * FROM bdvendas.tb_funcionarios
+                            where email = @email and senha = @senha";
+
+                //Passo 2 - Organizar o SQL
+                MySqlCommand executaComando = new MySqlCommand(sql, conexao);
+                //Configurar os atributos para receber o quye vem da classe(Objeto) Cliente
+
+                executaComando.Parameters.AddWithValue("@email",email);
+                executaComando.Parameters.AddWithValue("@senha", senha);
+                
+                conexao.Open();
+
+                //Gerando e registrando do dados em uma Biblioteca
+                MySqlDataReader dados = executaComando.ExecuteReader();
+                //Verificação para saber se os dados foram preenchidos
+                if (dados.Read())
+                {
+                    MessageBox.Show("Login realizado com sucesso!");
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Usúario ou senha Invalidos!");
+                    return false;
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Erro ao logar: "+erro);
+                return false;
+            }
+        }
+        #endregion
     }
 }

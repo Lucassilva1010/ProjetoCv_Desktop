@@ -112,6 +112,7 @@ namespace ProjetoCv.br.com.projeto.view
             this.btnLogin.TabIndex = 30;
             this.btnLogin.Text = "Entrar";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // FrmLogin
             // 

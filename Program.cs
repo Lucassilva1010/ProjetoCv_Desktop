@@ -25,7 +25,8 @@ namespace ProjetoCv
             //Application.Run(new FrmHistoricoVendas());
             //Application.Run(new FrmDetalhes());
             //Application.Run(new FrmLogin());
-            Application.Run(new FrmMenu());
+            //Application.Run(new FrmMenu());
+            Application.Run(new FrmLogin());
         }
     }
 }
